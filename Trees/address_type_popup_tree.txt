@@ -1,0 +1,287 @@
+## Main window state right after opening the address-type popup
+
+Window       name='Fakturama - C:\\Users\\123\\Fakturama' auto_id=None class='SWT_Window0'
+    rect=(L-11,T-11,R1931,B1139)
+    Pane         name='' auto_id=None class='#32770'
+        rect=(L1077,T872,R1429,B911)
+        Pane         name='' auto_id=None class='SWT_Window0'
+            rect=(L1077,T872,R1429,B911)
+            Pane         name='' auto_id=None class='SWT_Window0'
+                rect=(L1079,T874,R1400,B909)
+                CheckBox     name='Invoice address' auto_id=None class='Button'
+                    rect=(L1084,T879,R1230,B904)
+                CheckBox     name='Delivery address' auto_id=None class='Button'
+                    rect=(L1242,T879,R1395,B904)
+    Pane         name='' auto_id=None class='SWT_Window0'
+        rect=(L0,T146,R1897,B1128)
+        Pane         name='' auto_id=None class='SWT_Window0'
+            rect=(L0,T146,R1897,B1128)
+            Pane         name='Fakturama Perspective' auto_id=None class='SWT_Window0'
+                rect=(L0,T146,R1897,B1128)
+                Pane         name='' auto_id=None class='SWT_Window0'
+                    rect=(L0,T146,R1897,B1128)
+                    Pane         name='Navigation View' auto_id=None class='SWT_Window0'
+                        rect=(L0,T146,R189,B1128)
+                        Pane         name='' auto_id=None class='SWT_Window0'
+                            rect=(L0,T146,R189,B1128)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T151,R184,B230)
+                                Text         name='Web Shop' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T190,R121,B221)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T235,R184,B674)
+                                Text         name='Documents' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T274,R129,B305)
+                                Text         name='Products' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T310,R108,B341)
+                                Text         name='Creditors' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T346,R110,B377)
+                                Text         name='Debtors' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T382,R102,B413)
+                                Text         name='terms of payment' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T418,R180,B449)
+                                Text         name='Shippings' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T454,R117,B485)
+                                Text         name='VATs' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T490,R75,B521)
+                                Text         name='Texts' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T526,R76,B557)
+                                Text         name='Lists' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T562,R72,B593)
+                                Text         name='Expenditure Vouchers' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T598,R208,B629)
+                                Text         name='Receipt Vouchers' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T634,R172,B665)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T679,R184,B794)
+                                Text         name='New product' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T718,R141,B749)
+                                Text         name='New Contact' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T754,R139,B785)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T799,R184,B950)
+                                Text         name='ParcelService' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T838,R138,B869)
+                                Text         name='www.fakturama.info' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T874,R196,B905)
+                                Text         name='Calculator' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T910,R116,B941)
+                    Tab          name='New Debtor' auto_id=None class='SWT_Window0'
+                        rect=(L193,T146,R1897,B1128)
+                        ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                            rect=(L1845,T147,R1891,B175)
+                            Button       name='Minimize' auto_id=None class=''
+                                rect=(L1845,T147,R1868,B169)
+                            Button       name='Restore' auto_id=None class=''
+                                rect=(L1868,T147,R1891,B169)
+                        Pane         name='New Debtor' auto_id=None class='SWT_Window0'
+                            rect=(L196,T178,R1894,B1125)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L196,T178,R1894,B1112)
+                                Pane         name='' auto_id=None class='SWT_Window0'
+                                    rect=(L196,T178,R1894,B1112)
+                                    Text         name='Customer ID' auto_id=None class='Static'
+                                        rect=(L279,T201,R379,B226)
+                                    Edit         name='Customer ID' auto_id=None class='Edit'
+                                        rect=(L389,T198,R605,B229) value='CUST000002'
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L615,T198,R1884,B229)
+                                        Text         name='Category' auto_id=None class='Static'
+                                            rect=(L615,T200,R687,B225)
+                                        ComboBox     name='Category' auto_id=None class='SWT_Window0'
+                                            rect=(L697,T198,R1884,B228)
+                                            Edit         name='Category' auto_id=None class='Edit'
+                                                rect=(L699,T200,R1856,B226) value=''
+                                            Button       name='Open' auto_id=None class='Button'
+                                                rect=(L1856,T200,R1882,B226)
+                                    Text         name='Company' auto_id=None class='Static'
+                                        rect=(L302,T252,R379,B277)
+                                    Edit         name='Company' auto_id=None class='Edit'
+                                        rect=(L389,T242,R805,B288) value=''
+                                    Text         name='Salutation' auto_id=None class='Static'
+                                        rect=(L300,T305,R379,B330)
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L389,T301,R1884,B334)
+                                        ComboBox     name='' auto_id=None class='ComboBox'
+                                            rect=(L389,T301,R524,B334)
+                                            Text         name='' auto_id=None class=''
+                                                rect=(L3,T3,R106,B30)
+                                            Button       name='Open' auto_id=None class=''
+                                                rect=(L499,T302,R523,B333)
+                                    Text         name='First Name Last Name' auto_id=None class='Static'
+                                        rect=(L206,T350,R379,B375)
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L389,T347,R1884,B378)
+                                        Edit         name='' auto_id=None class='Edit'
+                                            rect=(L389,T347,R605,B378) value=''
+                                        Edit         name='' auto_id=None class='Edit'
+                                            rect=(L615,T347,R831,B378) value=''
+                                    Tab          name='Addresses' auto_id=None class='SWT_Window0'
+                                        rect=(L206,T391,R1884,B1092)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L208,T423,R1882,B1090)
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L213,T428,R1877,B577)
+                                            Tab          name='Main address' auto_id=None class='SWT_Window0'
+                                                rect=(L213,T582,R1877,B1085)
+                                                Button       name='+' auto_id=None class='Button'
+                                                    rect=(L1848,T583,R1872,B618)
+                                                Pane         name='' auto_id=None class='SWT_Window0'
+                                                    rect=(L215,T621,R1875,B1083)
+                                                    Text         name='additional name' auto_id=None class='Static'
+                                                        rect=(L260,T629,R388,B654)
+                                                    Edit         name='additional name' auto_id=None class='Edit'
+                                                        rect=(L393,T626,R1082,B657) value=''
+                                                    Text         name='local consultant' auto_id=None class='Static'
+                                                        rect=(L1087,T629,R1210,B654)
+                                                    Edit         name='local consultant' auto_id=None class='Edit'
+                                                        rect=(L1215,T626,R1870,B657) value=''
+                                                    Text         name='Street' auto_id=None class='Static'
+                                                        rect=(L343,T665,R388,B690)
+                                                    Edit         name='Street' auto_id=None class='Edit'
+                                                        rect=(L393,T662,R1082,B693) value=''
+                                                    Text         name='E-Mail' auto_id=None class='Static'
+                                                        rect=(L1161,T665,R1210,B690)
+                                                    Edit         name='E-Mail' auto_id=None class='Edit'
+                                                        rect=(L1215,T662,R1870,B693) value=''
+                                                    Text         name='Address specification' auto_id=None class='Static'
+                                                        rect=(L220,T701,R388,B726)
+                                                    Edit         name='Address specification' auto_id=None class='Edit'
+                                                        rect=(L393,T698,R1082,B729) value=''
+                                                    Text         name='Telephone' auto_id=None class='Static'
+                                                        rect=(L1130,T701,R1210,B726)
+                                                    Edit         name='Telephone' auto_id=None class='Edit'
+                                                        rect=(L1215,T698,R1870,B729) value=''
+                                                    Text         name='district' auto_id=None class='Static'
+                                                        rect=(L335,T737,R388,B762)
+                                                    Edit         name='district' auto_id=None class='Edit'
+                                                        rect=(L393,T734,R1082,B765) value=''
+                                                    Text         name='2nd phone' auto_id=None class='Static'
+                                                        rect=(L1123,T737,R1210,B762)
+                                                    Edit         name='2nd phone' auto_id=None class='Edit'
+                                                        rect=(L1215,T734,R1870,B765) value=''
+                                                    Text         name='ZIP - City' auto_id=None class='Static'
+                                                        rect=(L316,T773,R388,B798)
+                                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                                        rect=(L393,T770,R1082,B801)
+                                                        Edit         name='' auto_id=None class='Edit'
+                                                            rect=(L393,T770,R459,B801) value=''
+                                                        Edit         name='' auto_id=None class='Edit'
+                                                            rect=(L469,T770,R1082,B801) value=''
+                                                    Text         name='Telefax' auto_id=None class='Static'
+                                                        rect=(L1158,T773,R1210,B798)
+                                                    Edit         name='Telefax' auto_id=None class='Edit'
+                                                        rect=(L1215,T770,R1870,B801) value=''
+                                                    Text         name='Country' auto_id=None class='Static'
+                                                        rect=(L325,T810,R388,B835)
+                                                    ComboBox     name='Country' auto_id=None class='ComboBox'
+                                                        rect=(L393,T806,R1082,B839)
+                                                        Text         name='Country' auto_id=None class=''
+                                                            rect=(L3,T3,R660,B30)
+                                                        Button       name='Open' auto_id=None class=''
+                                                            rect=(L1057,T807,R1081,B838)
+                                                    Text         name='Mobile' auto_id=None class='Static'
+                                                        rect=(L1155,T810,R1210,B835)
+                                                    Edit         name='Mobile' auto_id=None class='Edit'
+                                                        rect=(L1215,T806,R1870,B839) value=''
+                                                    Text         name='address type' auto_id=None class='Static'
+                                                        rect=(L286,T847,R388,B872)
+                                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                                        rect=(L393,T844,R1082,B875)
+                                                        Edit         name='' auto_id=None class='Edit'
+                                                            rect=(L393,T844,R1056,B875) value=''
+                                                        Button       name='' auto_id=None class='Button'
+                                                            rect=(L1056,T844,R1082,B875)
+                                                TabItem      name='Main address' auto_id=None class=''
+                                                    rect=(L213,T582,R361,B618)
+                                        TabItem      name='Addresses' auto_id=None class=''
+                                            rect=(L206,T391,R325,B420)
+                                        TabItem      name='Miscellaneous' auto_id=None class=''
+                                            rect=(L311,T391,R429,B420)
+                                        TabItem      name='Notice' auto_id=None class=''
+                                            rect=(L429,T391,R488,B420)
+                        TabItem      name='Fakturama' auto_id=None class=''
+                            rect=(L193,T146,R303,B175)
+                        TabItem      name='New Debtor' auto_id=None class=''
+                            rect=(L303,T146,R478,B175)
+    Pane         name='' auto_id=None class='SWT_Window0'
+        rect=(L0,T64,R1920,B146)
+        Pane         name='' auto_id=None class='ReBarWindow32'
+            rect=(L5,T69,R1915,B141)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L16,T73,R205,B137)
+                Button       name='Get new orders and products from web shop' auto_id=None class=''
+                    rect=(L16,T73,R110,B137)
+                Button       name='Print/Export this document as an OpenOffice Writer document' auto_id=None class=''
+                    rect=(L110,T73,R157,B137)
+                Button       name='Save the current contents' auto_id=None class=''
+                    rect=(L157,T73,R205,B137)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L220,T73,R418,B137)
+                Button       name='Create: New Order' auto_id=None class=''
+                    rect=(L220,T73,R277,B137)
+                Button       name='Create: New Invoice' auto_id=None class=''
+                    rect=(L277,T73,R344,B137)
+                Button       name='Create: New Delivery Note' auto_id=None class=''
+                    rect=(L344,T73,R418,B137)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L433,T69,R821,B141)
+                Button       name='Create a new product' auto_id=None class=''
+                    rect=(L433,T69,R506,B141)
+                SplitButton  name='Create a new contact' auto_id=None class=''
+                    rect=(L506,T69,R609,B141)
+                Button       name='Create: New Expenditure' auto_id=None class=''
+                    rect=(L609,T69,R753,B141)
+                Button       name='Create: New Receipt Voucher' auto_id=None class=''
+                    rect=(L753,T69,R821,B141)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L836,T73,R1915,B137)
+                Button       name='Open the web site of the parcel service.' auto_id=None class=''
+                    rect=(L836,T73,R892,B137)
+                Button       name='Open the project web site www.fakturama.info' auto_id=None class=''
+                    rect=(L892,T73,R942,B137)
+                Button       name='Open the calculator' auto_id=None class=''
+                    rect=(L942,T73,R1031,B137)
+    Pane         name='' auto_id=None class='SWT_Window0'
+        rect=(L1897,T146,R1920,B1128)
+        Pane         name='' auto_id=None class='SWT_Window0'
+            rect=(L1897,T146,R1920,B195)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L1897,T151,R1920,B195)
+                Button       name='' auto_id=None class=''
+                    rect=(L1897,T151,R1920,B173)
+                CheckBox     name='' auto_id=None class=''
+                    rect=(L1897,T173,R1920,B195)
+    TitleBar     name='' auto_id=None class=''
+        rect=(L24,T-8,R1920,B34)
+        MenuBar      name='System' auto_id=None class=''
+            rect=(L0,T0,R33,B33)
+            MenuItem     name='System' auto_id=None class=''
+                rect=(L0,T0,R33,B33)
+        Button       name='Minimize' auto_id=None class=''
+            rect=(L1707,T0,R1778,B33)
+        Button       name='Restore' auto_id=None class=''
+            rect=(L1778,T0,R1848,B33)
+        Button       name='Close' auto_id=None class=''
+            rect=(L1848,T0,R1920,B33)
+    MenuBar      name='Application' auto_id=None class=''
+        rect=(L0,T34,R1920,B63)
+        MenuItem     name='File' auto_id=None class=''
+            rect=(L0,T34,R48,B63)
+        MenuItem     name='Edit' auto_id=None class=''
+            rect=(L48,T34,R100,B63)
+        MenuItem     name='Data' auto_id=None class=''
+            rect=(L100,T34,R159,B63)
+        MenuItem     name='New' auto_id=None class=''
+            rect=(L159,T34,R216,B63)
+        MenuItem     name='Extra' auto_id=None class=''
+            rect=(L216,T34,R276,B63)
+        MenuItem     name='Window' auto_id=None class=''
+            rect=(L276,T34,R364,B63)
+        MenuItem     name='Help' auto_id=None class=''
+            rect=(L364,T34,R423,B63)
+
+
+[WARNING] No new top-level window was detected after the click. The popup may be an embedded control inside the main window instead (dumped above), the click may not have triggered anything, or the window closed before this script could inspect it.
+
+# total elements: 140

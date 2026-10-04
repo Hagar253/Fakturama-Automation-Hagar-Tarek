@@ -1,0 +1,980 @@
+# Fakturama Complete UIA Tree
+
+## Main window (includes any EMBEDDED dialogs/popups still open)
+
+Window       name='Fakturama - C:\\Users\\123\\Fakturama' auto_id=None class='SWT_Window0'
+    rect=(L-11,T-11,R1931,B1139)
+    Pane         name='' auto_id=None class='SWT_Window0'
+        rect=(L0,T146,R1920,B1128)
+        Pane         name='' auto_id=None class='SWT_Window0'
+            rect=(L0,T146,R1920,B1128)
+            Pane         name='Fakturama Perspective' auto_id=None class='SWT_Window0'
+                rect=(L0,T146,R1920,B1128)
+                Pane         name='' auto_id=None class='SWT_Window0'
+                    rect=(L0,T146,R1920,B1128)
+                    Pane         name='Navigation View' auto_id=None class='SWT_Window0'
+                        rect=(L0,T146,R192,B1128)
+                        Pane         name='' auto_id=None class='SWT_Window0'
+                            rect=(L0,T146,R192,B1128)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T151,R187,B230)
+                                Text         name='Web Shop' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T190,R121,B221)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T235,R187,B674)
+                                Text         name='Documents' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T274,R129,B305)
+                                Text         name='Products' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T310,R108,B341)
+                                Text         name='Creditors' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T346,R110,B377)
+                                Text         name='Debtors' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T382,R102,B413)
+                                Text         name='terms of payment' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T418,R180,B449)
+                                Text         name='Shippings' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T454,R117,B485)
+                                Text         name='VATs' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T490,R75,B521)
+                                Text         name='Texts' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T526,R76,B557)
+                                Text         name='Lists' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T562,R72,B593)
+                                Text         name='Expenditure Vouchers' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T598,R208,B629)
+                                Text         name='Receipt Vouchers' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T634,R172,B665)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T679,R187,B794)
+                                Text         name='New product' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T718,R141,B749)
+                                Text         name='New Contact' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T754,R139,B785)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L5,T799,R187,B950)
+                                Text         name='ParcelService' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T838,R138,B869)
+                                Text         name='www.fakturama.info' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T874,R196,B905)
+                                Text         name='Calculator' auto_id=None class='SWT_Window0'
+                                    rect=(L11,T910,R116,B941)
+                    Tab          name='*New Order' auto_id=None class='SWT_Window0'
+                        rect=(L196,T146,R1920,B918)
+                        ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                            rect=(L1868,T147,R1914,B175)
+                            Button       name='Minimize' auto_id=None class=''
+                                rect=(L1868,T147,R1891,B169)
+                            Button       name='Maximize' auto_id=None class=''
+                                rect=(L1891,T147,R1914,B169)
+                        Pane         name='New Order' auto_id=None class='SWT_Window0'
+                            rect=(L199,T178,R1917,B915)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L199,T178,R1917,B915)
+                                Pane         name='' auto_id=None class='SWT_Window0'
+                                    rect=(L199,T178,R1917,B887)
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L199,T178,R1917,B887)
+                                        Text         name='No.' auto_id=None class='Static'
+                                            rect=(L215,T195,R243,B220)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L253,T191,R1305,B224)
+                                            Edit         name='' auto_id=None class='Edit'
+                                                rect=(L253,T192,R453,B223) value='PO000004'
+                                            Text         name='Date' auto_id=None class='Static'
+                                                rect=(L734,T195,R771,B220)
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L781,T191,R935,B224)
+                                                Edit         name='' auto_id=None class='Edit'
+                                                    rect=(L784,T194,R903,B221) value='Jul 14, 2026'
+                                            ComboBox     name='' auto_id=None class='ComboBox'
+                                                rect=(L965,T191,R1305,B224)
+                                                Text         name='' auto_id=None class=''
+                                                    rect=(L3,T3,R311,B30)
+                                                Button       name='Open' auto_id=None class=''
+                                                    rect=(L1280,T192,R1304,B223)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L1315,T192,R1404,B224)
+                                            Text         name='Order' auto_id=None class='Static'
+                                                rect=(L1315,T198,R1362,B218)
+                                            Image        name='' auto_id=None class='Static'
+                                                rect=(L1372,T192,R1404,B224)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L199,T237,R1917,B412)
+                                            Text         name='Cust.Ref.' auto_id=None class='Static'
+                                                rect=(L219,T279,R287,B304)
+                                            Edit         name='Cust.Ref.' auto_id=None class='Edit'
+                                                rect=(L292,T276,R839,B307) value='WEB-2026-0714-A17'
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L844,T302,R1325,B403)
+                                                Text         name='Consultant' auto_id=None class='Static'
+                                                    rect=(L856,T317,R941,B342)
+                                                Edit         name='Consultant' auto_id=None class='Edit'
+                                                    rect=(L951,T314,R1313,B345) value=''
+                                                Text         name='VAT' auto_id=None class='Static'
+                                                    rect=(L911,T362,R941,B387)
+                                                ComboBox     name='VAT' auto_id=None class='ComboBox'
+                                                    rect=(L951,T358,R1313,B391)
+                                                    Text         name='VAT' auto_id=None class=''
+                                                        rect=(L3,T3,R333,B30)
+                                                    Button       name='Open' auto_id=None class=''
+                                                        rect=(L1288,T359,R1312,B390)
+                                            Group        name='Create a follow-up document' auto_id=None class='SWT_GROUP'
+                                                rect=(L1330,T311,R1911,B403)
+                                                ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                                                    rect=(L1333,T336,R1675,B400)
+                                                    Button       name='Confirmation' auto_id=None class=''
+                                                        rect=(L1333,T336,R1448,B400)
+                                                    Button       name='Invoice' auto_id=None class=''
+                                                        rect=(L1448,T336,R1515,B400)
+                                                    Button       name='Delivery' auto_id=None class=''
+                                                        rect=(L1515,T336,R1589,B400)
+                                                    Button       name='Proforma' auto_id=None class=''
+                                                        rect=(L1589,T336,R1675,B400)
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L205,T312,R287,B403)
+                                                Text         name='Addresses' auto_id=None class='Static'
+                                                    rect=(L205,T312,R287,B337)
+                                                Image        name='' auto_id=None class='Static'
+                                                    rect=(L267,T350,R287,B370)
+                                                Image        name='' auto_id=None class='Static'
+                                                    rect=(L267,T383,R287,B403)
+                                            Tab          name='Invoice address' auto_id=None class='SWT_Window0'
+                                                rect=(L292,T312,R839,B403)
+                                                Edit         name='' auto_id=None class='Edit'
+                                                    rect=(L294,T344,R837,B401) value='Northstar Office GmbH\r\nMarta Klein\r\nFriedrichstrasse 88\r\nDE-10117 Berlin\r\nGermany'
+                                                    ScrollBar    name='Vertical' auto_id=None class=''
+                                                        rect=(L809,T346,R835,B399)
+                                                        Button       name='Line up' auto_id=None class=''
+                                                            rect=(L809,T346,R835,B372)
+                                                        Thumb        name='Position' auto_id=None class=''
+                                                            rect=(L809,T372,R835,B385)
+                                                        Button       name='Page down' auto_id=None class=''
+                                                            rect=(L0,T0,R0,B0)
+                                                        Button       name='Line down' auto_id=None class=''
+                                                            rect=(L809,T373,R835,B399)
+                                                TabItem      name='Invoice address' auto_id=None class=''
+                                                    rect=(L292,T312,R452,B341)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L199,T425,R243,B570)
+                                            Text         name='Items' auto_id=None class='Static'
+                                                rect=(L199,T425,R243,B450)
+                                            Image        name='' auto_id=None class='Static'
+                                                rect=(L223,T463,R243,B483)
+                                            Image        name='' auto_id=None class='Static'
+                                                rect=(L227,T496,R243,B512)
+                                            Image        name='' auto_id=None class='Static'
+                                                rect=(L227,T525,R243,B541)
+                                            Image        name='' auto_id=None class='Static'
+                                                rect=(L227,T554,R243,B570)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L253,T425,R1917,B887)
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L255,T427,R1905,B885)
+                                Pane         name='' auto_id=None class='SWT_Window0'
+                                    rect=(L199,T890,R1917,B915)
+                                Pane         name='' auto_id=None class='SWT_Window0'
+                                    rect=(L199,T887,R1917,B890)
+                        TabItem      name='Fakturama' auto_id=None class=''
+                            rect=(L196,T146,R306,B175)
+                        TabItem      name='*New Order' auto_id=None class=''
+                            rect=(L306,T146,R479,B175)
+                    Tab          name='Products' auto_id=None class='SWT_Window0'
+                        rect=(L196,T922,R1920,B1128)
+                        Pane         name='' auto_id=None class='SWT_Window0'
+                            rect=(L1822,T923,R1868,B951)
+                            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                                rect=(L1822,T923,R1868,B945)
+                                Button       name='Create a new product' auto_id=None class=''
+                                    rect=(L1822,T923,R1845,B945)
+                                Button       name='Delete the marked entry' auto_id=None class=''
+                                    rect=(L1845,T923,R1868,B945)
+                        ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                            rect=(L1868,T923,R1914,B951)
+                            Button       name='Minimize' auto_id=None class=''
+                                rect=(L1868,T923,R1891,B945)
+                            Button       name='Maximize' auto_id=None class=''
+                                rect=(L1891,T923,R1914,B945)
+                        Pane         name='Products' auto_id=None class='SWT_Window0'
+                            rect=(L199,T954,R1917,B1125)
+                            Pane         name='' auto_id=None class='SWT_Window0'
+                                rect=(L199,T954,R1917,B1125)
+                                Pane         name='' auto_id=None class='SWT_Window0'
+                                    rect=(L242,T956,R1915,B1123)
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L242,T956,R1915,B997)
+                                        Text         name='' auto_id=None class='Static'
+                                            rect=(L599,T966,R600,B986)
+                                        Pane         name='' auto_id=None class='SWT_Window0'
+                                            rect=(L1684,T956,R1905,B997)
+                                            Text         name='Search:' auto_id=None class='Static'
+                                                rect=(L1689,T964,R1745,B989)
+                                            Pane         name='' auto_id=None class='SWT_Window0'
+                                                rect=(L1750,T961,R1900,B992)
+                                                Edit         name='' auto_id=None class='Edit'
+                                                    rect=(L1750,T961,R1900,B992) value=''
+                                                    Image        name='' auto_id=None class='Static'
+                                                        rect=(L1752,T963,R1776,B990)
+                                    Pane         name='' auto_id=None class='SWT_Window0'
+                                        rect=(L242,T1002,R1915,B1123)
+                        TabItem      name='Products' auto_id=None class=''
+                            rect=(L196,T922,R345,B951)
+    Pane         name='' auto_id=None class='SWT_Window0'
+        rect=(L0,T64,R1920,B146)
+        Pane         name='' auto_id=None class='ReBarWindow32'
+            rect=(L5,T69,R1915,B141)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L16,T73,R205,B137)
+                Button       name='Get new orders and products from web shop' auto_id=None class=''
+                    rect=(L16,T73,R110,B137)
+                Button       name='Print/Export this document as an OpenOffice Writer document' auto_id=None class=''
+                    rect=(L110,T73,R157,B137)
+                Button       name='Save the current contents' auto_id=None class=''
+                    rect=(L157,T73,R205,B137)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L220,T73,R418,B137)
+                Button       name='Create: New Order' auto_id=None class=''
+                    rect=(L220,T73,R277,B137)
+                Button       name='Create: New Invoice' auto_id=None class=''
+                    rect=(L277,T73,R344,B137)
+                Button       name='Create: New Delivery Note' auto_id=None class=''
+                    rect=(L344,T73,R418,B137)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L433,T69,R821,B141)
+                Button       name='Create a new product' auto_id=None class=''
+                    rect=(L433,T69,R506,B141)
+                SplitButton  name='Create a new contact' auto_id=None class=''
+                    rect=(L506,T69,R609,B141)
+                Button       name='Create: New Expenditure' auto_id=None class=''
+                    rect=(L609,T69,R753,B141)
+                Button       name='Create: New Receipt Voucher' auto_id=None class=''
+                    rect=(L753,T69,R821,B141)
+            ToolBar      name='' auto_id=None class='ToolbarWindow32'
+                rect=(L836,T73,R1915,B137)
+                Button       name='Open the web site of the parcel service.' auto_id=None class=''
+                    rect=(L836,T73,R892,B137)
+                Button       name='Open the project web site www.fakturama.info' auto_id=None class=''
+                    rect=(L892,T73,R942,B137)
+                Button       name='Open the calculator' auto_id=None class=''
+                    rect=(L942,T73,R1031,B137)
+    TitleBar     name='' auto_id=None class=''
+        rect=(L24,T-8,R1920,B34)
+        MenuBar      name='System' auto_id=None class=''
+            rect=(L0,T0,R33,B33)
+            MenuItem     name='System' auto_id=None class=''
+                rect=(L0,T0,R33,B33)
+        Button       name='Minimize' auto_id=None class=''
+            rect=(L1707,T0,R1778,B33)
+        Button       name='Restore' auto_id=None class=''
+            rect=(L1778,T0,R1848,B33)
+        Button       name='Close' auto_id=None class=''
+            rect=(L1848,T0,R1920,B33)
+    MenuBar      name='Application' auto_id=None class=''
+        rect=(L0,T34,R1920,B63)
+        MenuItem     name='File' auto_id=None class=''
+            rect=(L0,T34,R48,B63)
+        MenuItem     name='Edit' auto_id=None class=''
+            rect=(L48,T34,R100,B63)
+        MenuItem     name='Data' auto_id=None class=''
+            rect=(L100,T34,R159,B63)
+        MenuItem     name='New' auto_id=None class=''
+            rect=(L159,T34,R216,B63)
+        MenuItem     name='Extra' auto_id=None class=''
+            rect=(L216,T34,R276,B63)
+        MenuItem     name='Window' auto_id=None class=''
+            rect=(L276,T34,R364,B63)
+        MenuItem     name='Help' auto_id=None class=''
+            rect=(L364,T34,R423,B63)
+
+
+--- SEPARATE TOP-LEVEL WINDOW: 'dump_tree.py - Fakturama-Automation-Hagar-Tarek - Visual Studio Code' ---
+Window       name='dump_tree.py - Fakturama-Automation-Hagar-Tarek - Visual Studio Code' auto_id=None class='Chrome_WidgetWin_1'
+    rect=(L-11,T-11,R1931,B1139)
+    Pane         name='' auto_id=None class='Intermediate D3D Window'
+        rect=(L0,T0,R1920,B1128)
+    Pane         name='dump_tree.py - Fakturama-Automation-Hagar-Tarek - Visual Studio Code' auto_id=None class='RootView'
+        rect=(L0,T0,R1920,B1128)
+        Pane         name='' auto_id=None class='NonClientView'
+            rect=(L0,T0,R1920,B1128)
+            Pane         name='' auto_id=None class='WinFrameView'
+                rect=(L0,T0,R1920,B1128)
+                Pane         name='' auto_id=None class='WinCaptionButtonContainer'
+                    rect=(L1715,T0,R1921,B51)
+                    Button       name='Minimize' auto_id=None class='WinCaptionButton'
+                        rect=(L1715,T0,R1783,B51)
+                    Button       name='Restore' auto_id=None class='WinCaptionButton'
+                        rect=(L1782,T0,R1851,B51)
+                    Button       name='Close' auto_id=None class='WinCaptionButton'
+                        rect=(L1851,T0,R1920,B51)
+                Pane         name='' auto_id=None class='ClientView'
+                    rect=(L0,T0,R1920,B1128)
+                    Pane         name='' auto_id=None class='View'
+                        rect=(L0,T0,R1920,B1128)
+                        Pane         name='' auto_id=None class='View'
+                            rect=(L0,T0,R1920,B1128)
+                            Pane         name='' auto_id=None class='View'
+                                rect=(L0,T0,R1920,B1128)
+                                Document     name='dump_tree.py - Fakturama-Automation-Hagar-Tarek - Visual Studio Code' auto_id=None class=''
+                                    rect=(L0,T0,R1920,B1128)
+                                    Group        name='' auto_id=None class='agent-status-enabled unified-agents-bar'
+                                        rect=(L0,T0,R1920,B1128)
+                                        Pane         name='' auto_id=None class='file-icons-enabled monaco-enable-motion modern-ui modern-ui-tabs modern-ui-connected-editor-tabs modern-ui-notifications-dialogs monaco-workbench windows chromium noauxiliarybar floating-panels panel-position-bottom panel-alignment-center floating-panel-outer-right vs-dark vscode-theme-defaults-themes-2026-dark-json maximized'
+                                            rect=(L0,T0,R1920,B1128)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal disabled'
+                                                rect=(L0,T52,R1920,B59)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal disabled'
+                                                rect=(L0,T52,R1920,B59)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal disabled'
+                                                rect=(L0,T1086,R1920,B1092)
+                                            MenuBar      name='' auto_id=None class='menubar'
+                                                rect=(L52,T0,R542,B53)
+                                                MenuItem     name='File' auto_id=None class='menubar-menu-button'
+                                                    rect=(L52,T0,R106,B53)
+                                                MenuItem     name='Edit' auto_id=None class='menubar-menu-button'
+                                                    rect=(L105,T0,R163,B53)
+                                                MenuItem     name='Selection' auto_id=None class='menubar-menu-button'
+                                                    rect=(L162,T0,R265,B53)
+                                                MenuItem     name='View' auto_id=None class='menubar-menu-button'
+                                                    rect=(L264,T0,R330,B53)
+                                                MenuItem     name='Go' auto_id=None class='menubar-menu-button'
+                                                    rect=(L329,T0,R379,B53)
+                                                MenuItem     name='Run' auto_id=None class='menubar-menu-button'
+                                                    rect=(L378,T0,R437,B53)
+                                                MenuItem     name='More' auto_id=None class='menubar-menu-button'
+                                                    rect=(L436,T0,R494,B53)
+                                            ToolBar      name='' auto_id=None class='actions-container'
+                                                rect=(L556,T8,R1364,B44)
+                                                Button       name='Go Back (Alt+LeftArrow)' auto_id=None class='action-label codicon codicon-arrow-left'
+                                                    rect=(L556,T9,R590,B43)
+                                                Button       name='Go Forward (Alt+RightArrow)' auto_id=None class='action-label disabled codicon codicon-arrow-right'
+                                                    rect=(L595,T9,R629,B43)
+                                                ToolBar      name='Agent Status' auto_id=None class='action-item agent-status-container'
+                                                    rect=(L634,T8,R1364,B44)
+                                                    Button       name='Open Quick Access' auto_id=None class='agent-status-input-area'
+                                                        rect=(L635,T9,R1287,B43)
+                                                    Group        name='' auto_id=None class='agent-status-badge-section sparkle monaco-dropdown-with-primary'
+                                                        rect=(L1286,T9,R1363,B43)
+                                                        Button       name='Toggle Chat' auto_id=None class='action-container menu-entry'
+                                                            rect=(L1286,T9,R1336,B43)
+                                                            Button       name='Toggle Chat' auto_id=None class='action-label codicon codicon-chat-sparkle'
+                                                                rect=(L1295,T9,R1329,B43)
+                                                        Group        name='' auto_id=None class='monaco-dropdown'
+                                                            rect=(L1338,T9,R1361,B43)
+                                                            Group        name='' auto_id=None class='dropdown-label'
+                                                                rect=(L1338,T9,R1361,B43)
+                                                                Button       name='More Actions' auto_id=None class='action-label codicon codicon-chevron-down agent-status-sparkle-dropdown'
+                                                                    rect=(L1333,T9,R1361,B46)
+                                            ToolBar      name='' auto_id=None class='actions-container'
+                                                rect=(L1378,T9,R1415,B43)
+                                                Button       name='Open in Agents Window (Ctrl+Shift+A)' auto_id=None class='action-item open-in-agents-titlebar-widget'
+                                                    rect=(L1378,T9,R1415,B43)
+                                            ToolBar      name='Title actions' auto_id=None class='actions-container'
+                                                rect=(L1557,T0,R1707,B53)
+                                                Button       name='Customize Layout...' auto_id=None class='action-label codicon codicon-configure-layout-icon'
+                                                    rect=(L1557,T9,R1590,B43)
+                                                Button       name='Toggle Primary Side Bar (Ctrl+B)' auto_id=None class='action-label checked codicon codicon-panel-left'
+                                                    rect=(L1596,T9,R1629,B43)
+                                                    Text         name='\uebf3' auto_id=None class=''
+                                                        rect=(L1600,T14,R1625,B39)
+                                                Button       name='Toggle Panel (Ctrl+J)' auto_id=None class='action-label checked codicon codicon-panel-layout-icon'
+                                                    rect=(L1635,T9,R1668,B43)
+                                                    Text         name='\uebf2' auto_id=None class=''
+                                                        rect=(L1639,T14,R1664,B39)
+                                                Button       name='Toggle Secondary Side Bar (Ctrl+Alt+B)' auto_id=None class='action-label codicon codicon-auxiliarybar-right-off-layout-icon'
+                                                    rect=(L1674,T9,R1707,B43)
+                                                    Text         name='\uec00' auto_id=None class=''
+                                                        rect=(L1678,T14,R1703,B39)
+                                            Group        name='' auto_id=None class='monaco-sash vertical disabled'
+                                                rect=(L72,T52,R78,B1086)
+                                            Group        name='' auto_id=None class='monaco-sash vertical primary-sidebar-sash'
+                                                rect=(L429,T52,R435,B1086)
+                                            Group        name='' auto_id=None class='monaco-sash vertical disabled'
+                                                rect=(L1920,T52,R1926,B1086)
+                                            Tab          name='Active View Switcher' auto_id=None class='actions-container'
+                                                rect=(L11,T58,R66,B508)
+                                                TabItem      name='Explorer (Ctrl+Shift+E)' auto_id=None class='action-item icon checked'
+                                                    rect=(L11,T58,R66,B112)
+                                                    Group        name='Explorer (Ctrl+Shift+E)' auto_id=None class='action-label codicon codicon-explorer-view-icon'
+                                                        rect=(L11,T58,R66,B112)
+                                                TabItem      name='Search (Ctrl+Shift+F)' auto_id=None class='action-item icon'
+                                                    rect=(L11,T124,R66,B178)
+                                                    Group        name='Search (Ctrl+Shift+F)' auto_id=None class='action-label codicon codicon-search-view-icon'
+                                                        rect=(L11,T124,R66,B178)
+                                                TabItem      name='Source Control (Ctrl+Shift+G) - 7 pending changes' auto_id=None class='action-item icon'
+                                                    rect=(L11,T190,R66,B244)
+                                                    Group        name='Source Control (Ctrl+Shift+G) - 7 pending changes' auto_id=None class='action-label codicon codicon-source-control-view-icon'
+                                                        rect=(L11,T190,R66,B244)
+                                                    Group        name='Source Control (Ctrl+Shift+G) - 7 pending changes' auto_id=None class='badge'
+                                                        rect=(L11,T190,R66,B244)
+                                                TabItem      name='Run and Debug (Ctrl+Shift+D)' auto_id=None class='action-item icon'
+                                                    rect=(L11,T256,R66,B310)
+                                                    Group        name='Run and Debug (Ctrl+Shift+D)' auto_id=None class='action-label codicon codicon-run-view-icon'
+                                                        rect=(L11,T256,R66,B310)
+                                                TabItem      name='Extensions (Ctrl+Shift+X)' auto_id=None class='action-item icon'
+                                                    rect=(L11,T322,R66,B376)
+                                                    Group        name='Extensions (Ctrl+Shift+X)' auto_id=None class='action-label codicon codicon-extensions-view-icon'
+                                                        rect=(L11,T322,R66,B376)
+                                                TabItem      name='Testing' auto_id=None class='action-item icon'
+                                                    rect=(L11,T388,R66,B442)
+                                                    Group        name='Testing' auto_id=None class='action-label codicon codicon-test-view-icon'
+                                                        rect=(L11,T388,R66,B442)
+                                                TabItem      name='Python' auto_id=None class='action-item icon'
+                                                    rect=(L11,T454,R66,B508)
+                                                    Group        name='Python' auto_id=None class='action-label activity-workbench-view-extension-python-2ddbb6c0002ed9bb02b00cafee90591312fbfaa6 uri-icon'
+                                                        rect=(L11,T454,R66,B508)
+                                            ToolBar      name='Manage' auto_id=None class='actions-container'
+                                                rect=(L11,T953,R66,B1074)
+                                                Button       name='Accounts' auto_id=None class='action-item icon'
+                                                    rect=(L11,T953,R66,B1008)
+                                                    Group        name='Accounts' auto_id=None class='action-label codicon codicon-accounts-view-bar-icon has-avatar'
+                                                        rect=(L11,T953,R66,B1008)
+                                                Button       name='Manage' auto_id=None class='action-item icon'
+                                                    rect=(L11,T1019,R66,B1074)
+                                                    Group        name='Manage' auto_id=None class='action-label codicon codicon-settings-view-bar-icon'
+                                                        rect=(L11,T1019,R66,B1074)
+                                                        Text         name='\ueb51' auto_id=None class=''
+                                                            rect=(L20,T1028,R57,B1065)
+                                            Text         name='Explorer' auto_id=None class=''
+                                                rect=(L91,T53,R308,B102)
+                                            ToolBar      name='Search actions' auto_id=None class='actions-container'
+                                                rect=(L313,T53,R422,B102)
+                                                Group        name='' auto_id=None class='monaco-dropdown'
+                                                    rect=(L389,T61,R422,B94)
+                                                    Group        name='' auto_id=None class='dropdown-label'
+                                                        rect=(L389,T61,R422,B94)
+                                                        Button       name='Views and More Actions...' auto_id=None class='action-label codicon codicon-toolbar-more'
+                                                            rect=(L389,T61,R422,B94)
+                                            ToolBar      name='' auto_id=None class='actions-container highlight-toggled'
+                                                rect=(L0,T0,R0,B0)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal disabled'
+                                                rect=(L73,T984,R427,B991)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal disabled'
+                                                rect=(L73,T1026,R427,B1033)
+                                            Button       name='Explorer Section: Fakturama-Automation-Hagar-Tarek' auto_id=None class='pane-header expanded'
+                                                rect=(L79,T101,R421,B144)
+                                                Text         name='Explorer Section: Fakturama-Automation-Hagar-Tarek' auto_id=None class='title'
+                                                    rect=(L115,T101,R412,B144)
+                                            Tree         name='Files Explorer' auto_id=None class='monaco-list list_id_6 mouse-support last-focused element-focused selection-single'
+                                                rect=(L73,T143,R427,B988)
+                                                TreeItem     name='__pycache__' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T143,R421,B177)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\__pycache__' auto_id=None class='monaco-icon-label folder-icon fakturama-automation-hagar-tarek-name-dir-icon __pycache__-name-folder-icon explorer-item'
+                                                        rect=(L124,T143,R421,B177)
+                                                TreeItem     name='docs' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T176,R421,B210)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\docs' auto_id=None class='monaco-icon-label folder-icon fakturama-automation-hagar-tarek-name-dir-icon docs-name-folder-icon explorer-item'
+                                                        rect=(L124,T176,R421,B210)
+                                                TreeItem     name='Order extraction' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T209,R421,B243)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Order extraction' auto_id=None class='monaco-icon-label folder-icon fakturama-automation-hagar-tarek-name-dir-icon order/extraction-name-folder-icon explorer-item'
+                                                        rect=(L124,T209,R421,B243)
+                                                TreeItem     name='Trees' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T242,R421,B276)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees' auto_id=None class='monaco-icon-label folder-icon fakturama-automation-hagar-tarek-name-dir-icon trees-name-folder-icon explorer-item'
+                                                        rect=(L124,T242,R421,B276)
+                                                TreeItem     name='address_type_popup_tree.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T275,R421,B309)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\address_type_popup_tree.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon address_type_popup_tree.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T275,R421,B309)
+                                                TreeItem     name='dump_tree.py' auto_id=None class='monaco-list-row focused selected'
+                                                    rect=(L79,T308,R421,B342)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\dump_tree.py' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon dump_tree.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L103,T308,R421,B342)
+                                                TreeItem     name='fakturama_debtor_tree.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T341,R421,B375)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\fakturama_debtor_tree.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon fakturama_debtor_tree.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T341,R421,B375)
+                                                TreeItem     name='items_row_tree.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T374,R421,B408)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\items_row_tree.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon items_row_tree.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T374,R421,B408)
+                                                TreeItem     name='items_select_product_tree.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T407,R421,B441)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\items_select_product_tree.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon items_select_product_tree.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T407,R421,B441)
+                                                TreeItem     name='main_page.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T440,R421,B474)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\main_page.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon main_page.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T440,R421,B474)
+                                                TreeItem     name='new_product_tree.txt' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T473,R421,B507)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\new_product_tree.txt' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon new_product_tree.txt-name-file-icon name-file-icon txt-ext-file-icon ext-file-icon plaintext-lang-file-icon explorer-item'
+                                                        rect=(L103,T473,R421,B507)
+                                                TreeItem     name='Work-flow' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T506,R421,B540)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow • Contains emphasized items' auto_id=None class='monaco-icon-label folder-icon fakturama-automation-hagar-tarek-name-dir-icon work-flow-name-folder-icon explorer-item monaco-decoration-itemColor monaco-decoration-itemColor-vf3v4d monaco-decoration-badge monaco-decoration-bubbleBadge-vf3v4d monaco-decoration-iconBadge-vf3v4d'
+                                                        rect=(L124,T506,R421,B540)
+                                                TreeItem     name='__pycache__' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T539,R421,B573)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\__pycache__ • Contains emphasized items' auto_id=None class='monaco-icon-label folder-icon work-flow-name-dir-icon __pycache__-name-folder-icon explorer-item monaco-decoration-itemColor monaco-decoration-itemColor--p0w8yl monaco-decoration-badge monaco-decoration-bubbleBadge--p0w8yl monaco-decoration-iconBadge--p0w8yl'
+                                                        rect=(L136,T539,R421,B573)
+                                                TreeItem     name='config.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T572,R421,B606)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\config.py' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon config.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L103,T572,R421,B606)
+                                                TreeItem     name='create_order.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T605,R421,B639)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\create_order.py' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon create_order.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L103,T605,R421,B639)
+                                                TreeItem     name='debtor.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T638,R421,B672)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\debtor.py' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon debtor.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L103,T638,R421,B672)
+                                                TreeItem     name='exceptions.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T671,R421,B705)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\exceptions.py' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon exceptions.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L103,T671,R421,B705)
+                                                TreeItem     name='main.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T704,R421,B738)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\main.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon main.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                        rect=(L103,T704,R421,B738)
+                                                TreeItem     name='products.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T737,R421,B771)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\products.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon products.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                        rect=(L103,T737,R421,B771)
+                                                TreeItem     name='ui_helpers.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T770,R421,B804)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\ui_helpers.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon ui_helpers.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                        rect=(L103,T770,R421,B804)
+                                                TreeItem     name='input_image.png' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T803,R421,B837)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\input_image.png' auto_id=None class='monaco-icon-label file-icon fakturama-automation-hagar-tarek-name-dir-icon input_image.png-name-file-icon name-file-icon png-ext-file-icon ext-file-icon unknown-lang-file-icon explorer-item'
+                                                        rect=(L91,T803,R421,B837)
+                                                TreeItem     name='steps12.py' auto_id=None class='monaco-list-row'
+                                                    rect=(L79,T836,R421,B870)
+                                                    Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\steps12.py' auto_id=None class='monaco-icon-label file-icon fakturama-automation-hagar-tarek-name-dir-icon steps12.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon explorer-item'
+                                                        rect=(L91,T836,R421,B870)
+                                            Button       name='Outline Section' auto_id=None class='pane-header'
+                                                rect=(L79,T987,R421,B1030)
+                                                Text         name='Outline' auto_id=None class='title'
+                                                    rect=(L115,T987,R176,B1030)
+                                            Button       name='Timeline Section' auto_id=None class='pane-header timeline-view'
+                                                rect=(L79,T1029,R421,B1072)
+                                                Text         name='Timeline' auto_id=None class='title'
+                                                    rect=(L115,T1029,R185,B1072)
+                                            Group        name='' auto_id=None class='monaco-sash horizontal'
+                                                rect=(L429,T345,R1920,B351)
+                                            Group        name='' auto_id=None class='part editor editor-tabs-multiple floating-editor-outer-top floating-editor-outer-right'
+                                                rect=(L435,T52,R1914,B345)
+                                                Group        name='' auto_id=None class='title tab-actions-reserve-space tabs show-file-icons connected-tabs-labels'
+                                                    rect=(L436,T53,R1913,B136)
+                                                    Tab          name='' auto_id=None class='tabs-container'
+                                                        rect=(L436,T53,R1771,B103)
+                                                        TabItem      name='steps12.py' auto_id=None class='tab tab-actions-right sizing-fit has-icon connected-tab-top-row tab-border-bottom'
+                                                            rect=(L436,T53,R619,B102)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\steps12.py' auto_id=None class='monaco-icon-label file-icon fakturama-automation-hagar-tarek-name-dir-icon steps12.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon tab-label tab-label-has-badge'
+                                                                rect=(L445,T59,R569,B96)
+                                                            ToolBar      name='Tab actions' auto_id=None class='actions-container'
+                                                                rect=(L574,T54,R611,B101)
+                                                                Button       name='Close (Ctrl+F4)' auto_id=None class='action-label codicon codicon-close-small'
+                                                                    rect=(L577,T62,R608,B93)
+                                                        TabItem      name='products.py' auto_id=None class='tab tab-actions-right sizing-fit has-icon tab-border-bottom connected-tab-top-row'
+                                                            rect=(L618,T53,R834,B102)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\products.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon products.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon tab-label tab-label-has-badge monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                                rect=(L627,T59,R785,B96)
+                                                            ToolBar      name='Tab actions' auto_id=None class='actions-container'
+                                                                rect=(L790,T54,R827,B101)
+                                                                Button       name='Close (Ctrl+F4)' auto_id=None class='action-label codicon codicon-close-small'
+                                                                    rect=(L793,T62,R824,B93)
+                                                        TabItem      name='ui_helpers.py' auto_id=None class='tab tab-actions-right sizing-fit has-icon connected-tab-top-row tab-border-bottom'
+                                                            rect=(L833,T53,R1060,B102)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\ui_helpers.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon ui_helpers.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon tab-label tab-label-has-badge monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                                rect=(L842,T59,R1011,B96)
+                                                            ToolBar      name='Tab actions' auto_id=None class='actions-container'
+                                                                rect=(L1016,T54,R1053,B101)
+                                                                Button       name='Close (Ctrl+F4)' auto_id=None class='action-label codicon codicon-close-small'
+                                                                    rect=(L1019,T62,R1050,B93)
+                                                        TabItem      name='main.py' auto_id=None class='tab tab-actions-right sizing-fit has-icon connected-tab-top-row tab-border-bottom'
+                                                            rect=(L1059,T53,R1242,B102)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Work-flow\\main.py • Modified' auto_id=None class='monaco-icon-label file-icon work-flow-name-dir-icon main.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon tab-label tab-label-has-badge monaco-decoration-itemColor monaco-decoration-itemColor-kkyaq5 monaco-decoration-badge monaco-decoration-text-badge monaco-decoration-itemBadge-kkyaq5 monaco-decoration-iconBadge-kkyaq5'
+                                                                rect=(L1068,T59,R1193,B96)
+                                                            ToolBar      name='Tab actions' auto_id=None class='actions-container'
+                                                                rect=(L1198,T54,R1235,B101)
+                                                                Button       name='Close (Ctrl+F4)' auto_id=None class='action-label codicon codicon-close-small'
+                                                                    rect=(L1201,T62,R1232,B93)
+                                                        TabItem      name='dump_tree.py, preview' auto_id=None class='tab tab-actions-right sizing-fit has-icon active selected tab-border-bottom tab-border-top connected-tab-top-row'
+                                                            rect=(L1241,T53,R1448,B102)
+                                                            Group        name='dump_tree' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon dump_tree.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon tab-label tab-label-has-badge italic'
+                                                                rect=(L1250,T59,R1399,B96)
+                                                            ToolBar      name='Tab actions' auto_id=None class='actions-container'
+                                                                rect=(L1404,T54,R1441,B101)
+                                                                Button       name='Close (Ctrl+F4)' auto_id=None class='action-label codicon codicon-close-small'
+                                                                    rect=(L1407,T62,R1438,B93)
+                                                    ToolBar      name='Editor actions' auto_id=None class='actions-container highlight-toggled'
+                                                        rect=(L1776,T53,R1907,B102)
+                                                        Group        name='' auto_id=None class='action-container menu-entry'
+                                                            rect=(L1776,T61,R1810,B94)
+                                                            Button       name='Run Python File' auto_id=None class='action-label codicon codicon-play'
+                                                                rect=(L1776,T61,R1810,B94)
+                                                        Group        name='' auto_id=None class='monaco-dropdown'
+                                                            rect=(L1809,T61,R1829,B94)
+                                                            Group        name='' auto_id=None class='dropdown-label'
+                                                                rect=(L1809,T61,R1829,B94)
+                                                                Button       name='Run or Debug...' auto_id=None class='action-label codicon codicon-chevron-down'
+                                                                    rect=(L1805,T61,R1829,B94)
+                                                        Button       name='Split Editor Right (Ctrl+\\) [Alt] Split Editor Down' auto_id=None class='action-label codicon codicon-split-horizontal'
+                                                            rect=(L1835,T61,R1868,B94)
+                                                        Group        name='' auto_id=None class='monaco-dropdown'
+                                                            rect=(L1874,T61,R1907,B94)
+                                                            Group        name='' auto_id=None class='dropdown-label'
+                                                                rect=(L1874,T61,R1907,B94)
+                                                                Button       name='More Actions...' auto_id=None class='action-label codicon codicon-toolbar-more'
+                                                                    rect=(L1874,T61,R1907,B94)
+                                                                    Text         name='\uea7c' auto_id=None class=''
+                                                                        rect=(L1878,T65,R1903,B90)
+                                                    List         name='' auto_id=None class='monaco-breadcrumbs'
+                                                        rect=(L436,T103,R1913,B136)
+                                                        ListItem     name='Trees\ueab6' auto_id=None class='folder monaco-breadcrumb-item'
+                                                            rect=(L436,T103,R528,B136)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees • Contains emphasized items' auto_id=None class='monaco-icon-label'
+                                                                rect=(L460,T103,R504,B136)
+                                                                Text         name='Trees' auto_id=None class=''
+                                                                    rect=(L460,T106,R504,B132)
+                                                            Text         name='\ueab6' auto_id=None class=''
+                                                                rect=(L503,T107,R528,B132)
+                                                        ListItem     name='\ue07bdump_tree.py\ueab6' auto_id=None class='file monaco-breadcrumb-item'
+                                                            rect=(L527,T103,R703,B136)
+                                                            Group        name='C:\\Users\\123\\Fakturama-Automation-Hagar-Tarek\\Trees\\dump_tree.py' auto_id=None class='monaco-icon-label file-icon trees-name-dir-icon dump_tree.py-name-file-icon name-file-icon py-ext-file-icon ext-file-icon python-lang-file-icon'
+                                                                rect=(L527,T103,R679,B136)
+                                                                Text         name='\ue07b' auto_id=None class=''
+                                                                    rect=(L527,T105,R558,B134)
+                                                                Text         name='dump_tree.py' auto_id=None class=''
+                                                                    rect=(L560,T106,R679,B132)
+                                                            Text         name='\ueab6' auto_id=None class=''
+                                                                rect=(L678,T107,R703,B132)
+                                                        ListItem     name='…' auto_id=None class='monaco-breadcrumb-item'
+                                                            rect=(L702,T103,R730,B136)
+                                                Group        name='dump_tree.py, preview' auto_id=None class='editor-instance'
+                                                    rect=(L436,T136,R1913,B344)
+                                                    Text         name='' auto_id=None class='monaco-editor no-user-select  showUnused showDeprecated vs-dark'
+                                                        rect=(L436,T136,R1912,B343)
+                                                        Edit         name='The editor is not accessible at this time. To enable screen reader optimized mode, use Shift+Alt+F1' auto_id=None class='native-edit-context'
+                                                            rect=(L0,T0,R0,B0) value=''
+                                                        Group        name='' auto_id=None class='sticky-widget'
+                                                            rect=(L436,T136,R1891,B149)
+                                                            Text         name='59' auto_id=None class=''
+                                                                rect=(L475,T121,R499,B146)
+                                                            Text         name='\ueab4' auto_id=None class=''
+                                                                rect=(L509,T121,R534,B146)
+                                                            List         name='' auto_id=None class='sticky-widget-lines'
+                                                                rect=(L538,T119,R1773,B148)
+                                                                ListItem     name='def\xa0main():' auto_id=None class='sticky-line-content stickyLine59'
+                                                                    rect=(L538,T119,R1773,B148)
+                                                        Window       name='Find / Replace' auto_id=None class='editor-widget find-widget visible no-results'
+                                                            rect=(L1123,T142,R1752,B192)
+                                                            Button       name='Toggle Replace' auto_id=None class='button toggle left codicon-find-collapsed codicon'
+                                                                rect=(L1131,T149,R1159,B185)
+                                                            Edit         name='open_new' auto_id=None class='input'
+                                                                rect=(L1164,T148,R1385,B183) value='open_new'
+                                                            CheckBox     name='Match Case (Alt+C)' auto_id=None class='monaco-custom-toggle codicon codicon-case-sensitive'
+                                                                rect=(L1386,T152,R1416,B182)
+                                                            CheckBox     name='Match Whole Word (Alt+W)' auto_id=None class='monaco-custom-toggle codicon codicon-whole-word'
+                                                                rect=(L1419,T152,R1449,B182)
+                                                            CheckBox     name='Use Regular Expression (Alt+R)' auto_id=None class='monaco-custom-toggle codicon codicon-regex'
+                                                                rect=(L1452,T152,R1482,B182)
+                                                            Text         name='No results' auto_id=None class=''
+                                                                rect=(L1492,T155,R1574,B180)
+                                                            Button       name='Previous Match (Shift+Enter)' auto_id=None class='button codicon codicon-find-previous-match disabled'
+                                                                rect=(L1600,T149,R1634,B183)
+                                                            Button       name='Next Match (Enter)' auto_id=None class='button codicon codicon-find-next-match disabled'
+                                                                rect=(L1638,T149,R1671,B183)
+                                                            CheckBox     name='Find in Selection (Alt+L)' auto_id=None class='monaco-custom-toggle codicon codicon-find-selection disabled'
+                                                                rect=(L1674,T149,R1707,B183)
+                                                            Button       name='Close (Escape)' auto_id=None class='button codicon codicon-widget-close'
+                                                                rect=(L1711,T150,R1745,B184)
+                                                            Group        name='' auto_id=None class='monaco-sash vertical'
+                                                                rect=(L1124,T143,R1127,B191)
+                                                        Image        name='' auto_id=None class='collapsedView'
+                                                            rect=(L538,T136,R1773,B3564)
+                                            Tab          name='Active View Switcher' auto_id=None class='actions-container'
+                                                rect=(L439,T352,R980,B400)
+                                                TabItem      name='Problems (Ctrl+Shift+M)' auto_id=None class='action-item'
+                                                    rect=(L439,T352,R550,B400)
+                                                    Group        name='Problems (Ctrl+Shift+M)' auto_id=None class='action-label'
+                                                        rect=(L454,T358,R535,B394)
+                                                TabItem      name='Output (Ctrl+Shift+U)' auto_id=None class='action-item'
+                                                    rect=(L549,T352,R642,B400)
+                                                    Group        name='Output (Ctrl+Shift+U)' auto_id=None class='action-label'
+                                                        rect=(L564,T358,R627,B394)
+                                                TabItem      name='Debug Console (Ctrl+Shift+Y)' auto_id=None class='action-item'
+                                                    rect=(L641,T352,R804,B400)
+                                                    Group        name='Debug Console (Ctrl+Shift+Y)' auto_id=None class='action-label'
+                                                        rect=(L656,T358,R789,B394)
+                                                TabItem      name='Terminal (Ctrl+`)' auto_id=None class='action-item checked'
+                                                    rect=(L803,T352,R906,B400)
+                                                    Group        name='Terminal (Ctrl+`)' auto_id=None class='action-label'
+                                                        rect=(L818,T358,R891,B394)
+                                                TabItem      name='Ports' auto_id=None class='action-item'
+                                                    rect=(L905,T352,R980,B400)
+                                                    Group        name='Ports' auto_id=None class='action-label'
+                                                        rect=(L920,T358,R965,B394)
+                                            ToolBar      name='Output actions' auto_id=None class='actions-container'
+                                                rect=(L985,T352,R1835,B400)
+                                                Button       name='Focus Terminal (Ctrl+DownArrow) [Alt] Split Terminal (Ctrl+Shift+5)' auto_id=None class='action-label single-terminal-tab'
+                                                    rect=(L1549,T357,R1640,B395)
+                                                Button       name='New Terminal (Ctrl+Shift+`) [Alt] Split Terminal (Ctrl+Shift+5)' auto_id=None class='action-container menu-entry'
+                                                    rect=(L1646,T359,R1679,B393)
+                                                    Button       name='New Terminal (Ctrl+Shift+`) [Alt] Split Terminal (Ctrl+Shift+5)' auto_id=None class='action-label codicon codicon-plus'
+                                                        rect=(L1646,T359,R1679,B393)
+                                                Group        name='' auto_id=None class='monaco-dropdown'
+                                                    rect=(L1679,T359,R1699,B393)
+                                                    Group        name='' auto_id=None class='dropdown-label'
+                                                        rect=(L1679,T359,R1699,B393)
+                                                        Button       name='Launch Profile...' auto_id=None class='action-label codicon codicon-chevron-down'
+                                                            rect=(L1674,T359,R1699,B393)
+                                                Button       name='Split Terminal (Ctrl+Shift+5)' auto_id=None class='action-label codicon codicon-split-horizontal'
+                                                    rect=(L1704,T359,R1738,B393)
+                                                Button       name='Kill Terminal' auto_id=None class='action-label codicon codicon-trash'
+                                                    rect=(L1743,T359,R1777,B393)
+                                                Group        name='' auto_id=None class='monaco-dropdown'
+                                                    rect=(L1782,T359,R1816,B393)
+                                                    Group        name='' auto_id=None class='dropdown-label'
+                                                        rect=(L1782,T359,R1816,B393)
+                                                        Button       name='Views and More Actions...' auto_id=None class='action-label codicon codicon-toolbar-more'
+                                                            rect=(L1782,T359,R1816,B393)
+                                                Group        name='' auto_id=None class='action-label separator disabled'
+                                                    rect=(L1827,T364,R1829,B388)
+                                            ToolBar      name='' auto_id=None class='actions-container highlight-toggled'
+                                                rect=(L1835,T352,R1907,B400)
+                                                Button       name='Maximize Panel' auto_id=None class='action-label codicon codicon-panel-maximize'
+                                                    rect=(L1835,T359,R1868,B393)
+                                                    Text         name='\ueb4c' auto_id=None class=''
+                                                        rect=(L1839,T364,R1864,B388)
+                                                Button       name='Hide Panel (Ctrl+J)' auto_id=None class='action-label codicon codicon-panel-close'
+                                                    rect=(L1874,T359,R1907,B393)
+                                            Group        name='' auto_id=None class='monaco-sash vertical maximum'
+                                                rect=(L1841,T400,R1847,B1079)
+                                            Group        name='' auto_id=None class='terminal-groups-container'
+                                                rect=(L436,T400,R1844,B1079)
+                                                Group        name='' auto_id=None class='terminal xterm focus'
+                                                    rect=(L436,T400,R1844,B1048)
+                                                    Image        name='' auto_id=None class='xterm-decoration-overview-ruler'
+                                                        rect=(L1829,T400,R1844,B1024)
+                                                    Group        name='' auto_id=None class='xterm-screen'
+                                                        rect=(L466,T412,R1819,B1036)
+                                                        Edit         name='Terminal 5, python Run the command: Toggle Screen Reader Accessibility Mode for an optimized screen reader experience Use Alt+F1 for terminal accessibility help' auto_id=None class='xterm-helper-textarea'
+                                                            rect=(L466,T1022,R477,B1048) value=''
+                                                        Image        name='' auto_id=None class='xterm-link-layer'
+                                                            rect=(L466,T412,R1819,B1036)
+                                                        Image        name='' auto_id=None class=''
+                                                            rect=(L466,T412,R1819,B1036)
+                                                StatusBar    name='' auto_id=None class='terminal-resize-overlay'
+                                                    rect=(L1093,T718,R1187,B761)
+                                                    Text         name='123 x 24' auto_id=None class=''
+                                                        rect=(L1109,T727,R1171,B750)
+                                            List         name='Terminal tabs' auto_id=None class='monaco-list list_id_1 mouse-support selection-single element-focused'
+                                                rect=(L1845,T400,R1913,B1079)
+                                                ListItem     name='Terminal 2 cmd' auto_id=None class='monaco-list-row'
+                                                    rect=(L1851,T400,R1907,B433)
+                                                    Group        name='$(warning)' auto_id=None class='monaco-icon-label file-icon ec5d7f6eb8776ae13db3d39ce1a8ef59-name-dir-icon 2-name-file-icon name-file-icon ext-file-icon unknown-lang-file-icon monaco-decoration-itemColor monaco-decoration-itemColor--vp1u1j'
+                                                        rect=(L1851,T400,R1907,B433)
+                                                        Text         name='\uea6c' auto_id=None class=''
+                                                            rect=(L1867,T404,R1891,B429)
+                                                ListItem     name='Terminal 4 cmd' auto_id=None class='monaco-list-row focused'
+                                                    rect=(L1851,T433,R1907,B466)
+                                                    Group        name='$(terminal-cmd)' auto_id=None class='monaco-icon-label file-icon ec5d7f6eb8776ae13db3d39ce1a8ef59-name-dir-icon 4-name-file-icon name-file-icon ext-file-icon unknown-lang-file-icon'
+                                                        rect=(L1851,T433,R1907,B466)
+                                                        Text         name='\uebc4' auto_id=None class=''
+                                                            rect=(L1867,T437,R1891,B462)
+                                                ListItem     name='Terminal 5 python' auto_id=None class='monaco-list-row selected'
+                                                    rect=(L1851,T466,R1907,B499)
+                                                    Group        name='$(terminal-cmd)' auto_id=None class='monaco-icon-label file-icon ec5d7f6eb8776ae13db3d39ce1a8ef59-name-dir-icon 5-name-file-icon name-file-icon ext-file-icon unknown-lang-file-icon'
+                                                        rect=(L1851,T466,R1907,B499)
+                                                        Text         name='\uebc4' auto_id=None class=''
+                                                            rect=(L1867,T470,R1891,B495)
+                                            StatusBar    name='' auto_id=None class='part statusbar status-border-top'
+                                                rect=(L0,T1086,R1920,B1128)
+                                                Group        name='remote' auto_id=None class='statusbar-item left has-command first-visible-item'
+                                                    rect=(L9,T1086,R54,B1122)
+                                                    Button       name='remote' auto_id=None class='statusbar-item-label'
+                                                        rect=(L15,T1086,R54,B1122)
+                                                Group        name='Fakturama-Automation-Hagar-Tarek (Git) - main*, Checkout Branch/Tag...' auto_id=None class='statusbar-item left has-command compact-right'
+                                                    rect=(L54,T1086,R147,B1122)
+                                                    Button       name='Fakturama-Automation-Hagar-Tarek (Git) - main*, Checkout Branch/Tag...' auto_id=None class='statusbar-item-label'
+                                                        rect=(L61,T1086,R147,B1122)
+                                                Group        name='Fakturama-Automation-Hagar-Tarek (Git) - Synchronize Changes' auto_id=None class='statusbar-item left has-command compact-left'
+                                                    rect=(L146,T1086,R187,B1122)
+                                                    Button       name='Fakturama-Automation-Hagar-Tarek (Git) - Synchronize Changes' auto_id=None class='statusbar-item-label'
+                                                        rect=(L146,T1086,R180,B1122)
+                                                Group        name='No Problems' auto_id=None class='statusbar-item left has-command last-visible-item'
+                                                    rect=(L186,T1086,R293,B1122)
+                                                    Button       name='No Problems' auto_id=None class='statusbar-item-label'
+                                                        rect=(L191,T1086,R289,B1122)
+                                                Group        name='Notifications' auto_id=None class='statusbar-item right has-command last-visible-item'
+                                                    rect=(L1866,T1086,R1911,B1122)
+                                                    Button       name='Notifications' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1866,T1086,R1908,B1122)
+                                                Group        name='circle-slash Prettier' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1755,T1086,R1866,B1122)
+                                                    Button       name='circle-slash Prettier' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1759,T1086,R1862,B1122)
+                                                Group        name='broadcast Go Live, Click to run live server' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1643,T1086,R1756,B1122)
+                                                    Button       name='broadcast Go Live, Click to run live server' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1647,T1086,R1751,B1122)
+                                                Group        name='Python 3.14.3, c:\\Users\\123\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1512,T1086,R1644,B1122)
+                                                    Button       name='Python 3.14.3, c:\\Users\\123\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1516,T1086,R1639,B1122)
+                                                Group        name='Copilot status' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1464,T1086,R1513,B1122)
+                                                    Button       name='Copilot status' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1468,T1086,R1508,B1122)
+                                                Group        name='Python' auto_id=None class='statusbar-item right has-command compact-left'
+                                                    rect=(L1391,T1086,R1465,B1122)
+                                                    Button       name='Python' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1391,T1086,R1457,B1122)
+                                                Group        name='Editor Language Status: Inline Suggestions, next: $(copilot) No inline suggestion available, Inline suggestions' auto_id=None class='statusbar-item right has-command compact-right'
+                                                    rect=(L1351,T1086,R1392,B1122)
+                                                    Button       name='Editor Language Status: Inline Suggestions, next: $(copilot) No inline suggestion available, Inline suggestions' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1358,T1086,R1392,B1122)
+                                                Group        name='CRLF' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1288,T1086,R1352,B1122)
+                                                    Button       name='CRLF' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1292,T1086,R1347,B1122)
+                                                Group        name='UTF-8' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1216,T1086,R1289,B1122)
+                                                    Button       name='UTF-8' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1221,T1086,R1284,B1122)
+                                                Group        name='Spaces: 4' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L1119,T1086,R1217,B1122)
+                                                    Button       name='Spaces: 4' auto_id=None class='statusbar-item-label'
+                                                        rect=(L1123,T1086,R1213,B1122)
+                                                Group        name='Ln 105, Col 29' auto_id=None class='statusbar-item right has-command'
+                                                    rect=(L983,T1086,R1120,B1122)
+                                                    Button       name='Ln 105, Col 29' auto_id=None class='statusbar-item-label'
+                                                        rect=(L987,T1086,R1115,B1122)
+                                                Group        name='git-commit Hagar253 (21 hours ago)' auto_id=None class='statusbar-item right has-command first-visible-item'
+                                                    rect=(L733,T1086,R984,B1122)
+                                                    Button       name='git-commit Hagar253 (21 hours ago)' auto_id=None class='statusbar-item-label'
+                                                        rect=(L737,T1086,R979,B1122)
+                                            Text         name='' auto_id=None class='monaco-alert'
+                                                rect=(L-19481,T1128,R-18830,B1156)
+                                                Text         name='nue anyway for testing purposes, Inspect this in the accessible view (Alt+F2)' auto_id=None class=''
+                                                    rect=(L-19481,T1128,R-18830,B1154)
+                                            Text         name='' auto_id=None class='monaco-alert'
+                                                rect=(L0,T0,R0,B0)
+                                            Group        name='' auto_id=None class='monaco-status'
+                                                rect=(L-19481,T1155,R-18830,B1183)
+                                                Text         name='Search returned 6 results in 3 files' auto_id=None class=''
+                                                    rect=(L-19481,T1155,R-19190,B1182)
+                                            Group        name='' auto_id=None class='monaco-status'
+                                                rect=(L0,T0,R0,B0)
+                            Pane         name='' auto_id=None class='View'
+                                rect=(L0,T0,R1920,B1128)
+
+
+--- SEPARATE TOP-LEVEL WINDOW: 'Hagar253/Fakturama-Automation-Hagar-Tarek - Google Chrome' ---
+Window       name='Hagar253/Fakturama-Automation-Hagar-Tarek - Google Chrome' auto_id=None class='Chrome_WidgetWin_1'
+    rect=(L-11,T-11,R1931,B1139)
+    Pane         name='' auto_id=None class='Intermediate D3D Window'
+        rect=(L0,T0,R1920,B1128)
+    Pane         name='Hagar253/Fakturama-Automation-Hagar-Tarek - Google Chrome - Hagar (Your Chrome)' auto_id=None class='BrowserRootView'
+        rect=(L0,T0,R1920,B1128)
+        Pane         name='' auto_id=None class='NonClientView'
+            rect=(L0,T0,R1920,B1128)
+            Pane         name='' auto_id=None class='BrowserFrameViewWin'
+                rect=(L0,T0,R1920,B1128)
+                Pane         name='' auto_id=None class='BrowserCaptionButtonContainer'
+                    rect=(L1715,T0,R1921,B60)
+                    Button       name='Minimize' auto_id=None class='WindowsCaptionButton'
+                        rect=(L1715,T0,R1783,B60)
+                    Button       name='Restore' auto_id=None class='WindowsCaptionButton'
+                        rect=(L1782,T0,R1851,B60)
+                    Button       name='Close' auto_id=None class='WindowsCaptionButton'
+                        rect=(L1851,T0,R1920,B60)
+                Pane         name='' auto_id=None class='BrowserView'
+                    rect=(L0,T0,R1920,B1128)
+                    Pane         name='' auto_id=None class='TopContainerView'
+                        rect=(L0,T60,R1920,B129)
+                        ToolBar      name='' auto_id=None class='ToolbarView'
+                            rect=(L0,T60,R1920,B129)
+                            Button       name='Back' auto_id=None class='BackForwardButton'
+                                rect=(L0,T69,R60,B120)
+                            Button       name='Forward' auto_id=None class='BackForwardButton'
+                                rect=(L66,T69,R117,B120)
+                            Button       name='Reload' auto_id=None class='ReloadButton'
+                                rect=(L123,T69,R174,B120)
+                            Group        name='' auto_id=None class='LocationBarView'
+                                rect=(L188,T69,R1713,B120)
+                                Button       name='View site information' auto_id=None class='LocationIconView'
+                                    rect=(L195,T77,R231,B114)
+                                Edit         name='github.com/Hagar253/Fakturama-Automation-Hagar-Tarek/tree/main' auto_id=None class='OmniboxViewViews'
+                                    rect=(L243,T77,R1598,B114) value='github.com/Hagar253/Fakturama-Automation-Hagar-Tarek/tree/main'
+                                Pane         name='' auto_id=None class='PageActionContainerView'
+                                    rect=(L1610,T77,R1695,B114)
+                                    Button       name='Install GitHub' auto_id=None class='PageActionView'
+                                        rect=(L1610,T77,R1647,B114)
+                                    Button       name='Bookmark this tab' auto_id=None class='PageActionView'
+                                        rect=(L1658,T77,R1695,B114)
+                            Pane         name='' auto_id=None class='ExtensionsToolbarDesktop'
+                                rect=(L1725,T69,R1776,B120)
+                                Button       name='Extensions' auto_id=None class='ExtensionsToolbarButton'
+                                    rect=(L1725,T69,R1776,B120)
+                            Pane         name='' auto_id=None class='ToolbarDivider'
+                                rect=(L1790,T83,R1794,B108)
+                            Button       name='Hagar (Your Chrome)' auto_id=None class='AvatarToolbarButton'
+                                rect=(L1806,T69,R1857,B120)
+                            Button       name='Chrome' auto_id=None class='BrowserAppMenuButton'
+                                rect=(L1860,T69,R1920,B120)
+                    Pane         name='' auto_id=None class='MultiContentsView'
+                        rect=(L0,T129,R1920,B1128)
+                        Pane         name='' auto_id=None class='Chrome_WidgetWin_1'
+                            rect=(L0,T131,R1920,B1129)
+                            Pane         name='' auto_id=None class='View'
+                                rect=(L0,T0,R0,B0)
+                        Pane         name='' auto_id=None class='ContentsSeparator'
+                            rect=(L0,T129,R1920,B131)
+                    Pane         name='' auto_id=None class='HorizontalTabStripRegionViewOld'
+                        rect=(L0,T0,R1715,B62)
+                        Pane         name='' auto_id=None class='TabStripComboButton'
+                            rect=(L9,T0,R51,B62)
+                            Button       name='Tab search' auto_id=None class='TabStripFlatEdgeButton'
+                                rect=(L9,T9,R51,B51)
+                        Pane         name='' auto_id=None class='TabStrip'
+                            rect=(L42,T0,R1403,B62)
+                            Tab          name='' auto_id=None class='TabContainerImpl'
+                                rect=(L42,T0,R1403,B62)
+                                TabItem      name='Copy of [EXTERNAL] Take home project 2026 - Google Docs' auto_id=None class='Tab'
+                                    rect=(L42,T0,R260,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L197,T9,R240,B51)
+                                TabItem      name='JavaScript Scope and Errors Explained - Google Gemini' auto_id=None class='Tab'
+                                    rect=(L233,T0,R451,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L387,T9,R429,B51)
+                                TabItem      name='Format README Markdown' auto_id=None class='Tab'
+                                    rect=(L423,T0,R641,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L578,T9,R621,B51)
+                                TabItem      name='Re: Software Engineer - Global, Remote - TJM Labs - ahagarshaheen2004@gmail.com - Gmail' auto_id=None class='Tab'
+                                    rect=(L614,T0,R832,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L768,T9,R810,B51)
+                                TabItem      name='JavaScript Scope and Errors Explained - Google Gemini' auto_id=None class='Tab'
+                                    rect=(L804,T0,R1022,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L959,T9,R1002,B51)
+                                TabItem      name='Hagar253/Fakturama-Automation-Hagar-Tarek' auto_id=None class='Tab'
+                                    rect=(L995,T0,R1213,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L1149,T9,R1191,B51)
+                                TabItem      name='command to get the folder structure - Google Search' auto_id=None class='Tab'
+                                    rect=(L1185,T0,R1403,B62)
+                                    Button       name='Close' auto_id=None class='TabCloseButton'
+                                        rect=(L1340,T9,R1383,B51)
+                            Pane         name='' auto_id=None class='TabStrip::TabDragContextImpl'
+                                rect=(L42,T0,R1403,B62)
+                        Button       name='New Tab' auto_id=None class='TabStripControlButton'
+                            rect=(L1394,T0,R1437,B62)
+                        Pane         name='' auto_id=None class='FrameGrabHandle'
+                            rect=(L1454,T0,R1518,B62)
+                        Pane         name='' auto_id=None class='TabStripActionContainer'
+                            rect=(L1517,T0,R1716,B60)
+                            Button       name='Open Gemini in Chrome' auto_id=None class='TabStripGlicButton'
+                                rect=(L1517,T0,R1698,B60)
+                            Pane         name='' auto_id=None class='Separator'
+                                rect=(L1700,T18,R1704,B42)
+                    Pane         name='' auto_id=None class='View'
+                        rect=(L0,T0,R0,B0)
+
+# total elements: 484
