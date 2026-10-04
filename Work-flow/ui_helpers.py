@@ -15,7 +15,7 @@ def wait_until(condition_fn, timeout=ACTION_TIMEOUT, interval=POLL_INTERVAL, des
             result = condition_fn()
             if result:
                 return result
-        except Exception as e:  # noqa: BLE001 - retry on any transient UIA error
+        except Exception as e:  
             last_error = e
         time.sleep(interval)
     raise RuntimeError(f"Timed out waiting for: {description}. Last error: {last_error}")
@@ -32,9 +32,8 @@ def find_fakturama_window():
 
 
 def find_edit_right_of_label(container, label_text, vertical_tolerance=15):
-    """Single unnamed Edit to the right of a Text label. UIA exposes these
-    labels as control_type='Text' even though their underlying Win32 class
-    is 'Static' -- 'Static' is not a valid UIA control_type in pywinauto."""
+    """Finds the Edit box to the right of a Text label. UIA reports these
+    labels as 'Text', even though Win32 calls them 'Static'."""
     label = container.child_window(title=label_text, control_type="Text")
     label.wait("exists visible", timeout=ACTION_TIMEOUT)
     lrect = label.rectangle()
@@ -54,8 +53,8 @@ def find_edit_right_of_label(container, label_text, vertical_tolerance=15):
 
 
 def find_edits_right_of_label(container, label_text, count, vertical_tolerance=15):
-    """Multiple unnamed Edits sharing one label (e.g. 'ZIP - City',
-    'First Name Last Name'). Returns them sorted left-to-right."""
+    """Finds several Edits sharing one label (e.g. 'ZIP - City').
+    Returns them left to right."""
     label = container.child_window(title=label_text, control_type="Text")
     label.wait("exists visible", timeout=ACTION_TIMEOUT)
     lrect = label.rectangle()
@@ -77,19 +76,17 @@ def find_edits_right_of_label(container, label_text, count, vertical_tolerance=1
 
 
 def escape_for_type_keys(text):
-    """type_keys() uses SendKeys-style syntax where +^%~(){} are modifier/
-    grouping characters, not literal text -- e.g. '+49' was being read as
-    Shift+4 (producing '$') followed by '9'. Wrapping each special
-    character in its own {} sends it as a literal keystroke instead."""
+    """type_keys() treats +^%~(){} as special characters. Wrapping each
+    one in {} makes it type the literal character instead (otherwise '+49'
+    comes out as '$9')."""
     special_chars = set("+^%~(){}")
     return "".join(f"{{{ch}}}" if ch in special_chars else ch for ch in text)
 
 
 def set_field(edit_ctrl, value, label_for_log):
-    """type_keys() is the PRIMARY method (see earlier note on set_text()
-    not triggering SWT's data-binding commit). Special characters in the
-    value are escaped before sending, since SendKeys syntax treats
-    +^%~(){} as modifiers/grouping rather than literal characters."""
+    """Uses type_keys() instead of set_text(), since set_text() doesn't
+    trigger SWT's data-binding commit. Special characters are escaped
+    first (see escape_for_type_keys)."""
     if not value:
         print(f"[OK] {label_for_log}: no value supplied, leaving as-is.")
         return
@@ -107,9 +104,8 @@ def set_field(edit_ctrl, value, label_for_log):
 
 
 def invoke_or_click(ctrl, description, prefer_click=False):
-    """prefer_click=True skips invoke() entirely. Needed for Image controls
-    in this app, which frequently accept invoke() without error but don't
-    actually perform the action -- a silent no-op, unlike real Buttons."""
+    """prefer_click=True skips invoke(). Some Image controls accept
+    invoke() without error but do nothing, so clicking is safer."""
     if prefer_click:
         ctrl.click_input()
     else:
@@ -123,14 +119,10 @@ def read_edit_value(edit_ctrl):
     return edit_ctrl.get_value() if hasattr(edit_ctrl, "get_value") else edit_ctrl.window_text()
 
 def switch_to_order_tab(win):
-    """Finds and activates the Order tab by POSITION, not by name --
-    Fakturama renames this tab dynamically (e.g. '*New Order' becomes
-    '*PO000003' once saved), so name-substring matching is unreliable
-    across runs. The main-area tab strip is consistently: index 0 =
-    'Fakturama' home tab, index 1 = the Order tab (always created first,
-    right after Fakturama). Filtered by vertical position to exclude
-    unrelated nested TabItems (e.g. inside dialogs) that share the same
-    control_type."""
+    """Finds the Order tab by position, not name -- Fakturama renames it
+    when saving (e.g. '*New Order' -> '*PO000003'). Main tabs are:
+    index 0 = 'Fakturama', index 1 = Order. Filtered by y-position to
+    skip TabItems from dialogs."""
     tab_items = win.descendants(control_type="TabItem")
     main_tabs = [t for t in tab_items if t.rectangle().top < 200]
     main_tabs.sort(key=lambda t: t.rectangle().left)
@@ -145,20 +137,15 @@ def switch_to_order_tab(win):
     time.sleep(1.0)
 
 def get_order_content_pane(win):
-    " Retrieves the pane so other functions can search inside it"
+    " Grabs the pane so other functions can search inside it"
     pane = win.child_window(title="New Order", control_type="Pane")
     pane.wait("exists visible", timeout=ACTION_TIMEOUT)
     return pane
 
 def ensure_order_tab_active(win):
-    """Switches to the Order tab and returns a FRESHLY FETCHED order_pane.
-    Must be called before any Items/Addresses interaction on the Order --
-    switching to another tab (Debtor editor, New product editor) can
-    silently leave old pywinauto element references pointing at stale,
-    disconnected state (reads/clicks don't error, they just act on the
-    wrong/old pane) -- same root cause already confirmed and fixed once
-    for Stage 2's Debtor re-selection; Stage 3 needs the same treatment
-    at every tab-crossing point, not just after Debtor creation."""
+    """Switches to the Order tab and returns a fresh order_pane.
+    Always call this before touching Items/Addresses -- switching tabs
+    can leave old element references pointing at stale state."""
     switch_to_order_tab(win)
     pane = get_order_content_pane(win)
     pane.set_focus()
@@ -166,8 +153,7 @@ def ensure_order_tab_active(win):
     return pane
 
 def _find_search_edit(dialog):
-    """Anchored to the 'Search:' label rather than its auto_id, since SWT
-    auto_ids are numeric and not guaranteed stable across sessions."""
+    """Anchors to the 'Search:' label"""
     search_label = dialog.child_window(title="Search:", control_type="Text")
     search_label.wait("exists visible", timeout=ACTION_TIMEOUT)
     lrect = search_label.rectangle()
@@ -181,10 +167,7 @@ def _find_search_edit(dialog):
     raise RuntimeError("Could not find the search Edit box next to 'Search:' label.")
 
 def _get_grid_row_count(dialog):
-    """Reads row count via UIA's native GridPattern, which can report
-    RowCount even when individual rows aren't exposed as tree elements
-    (the coverage gap observed in this app). Returns (None, None) if
-    unsupported -- an honest limit, not papered over."""
+    """Reads row count via UIA's GridPattern"""
     for pane in dialog.descendants(control_type="Pane"):
         try:
             grid_iface = pane.iface_grid
@@ -207,12 +190,7 @@ def _cancel_dialog(dialog):
     invoke_or_click(cancel_btn, f"Cancel in '{dialog.window_text()}' dialog")
 
 def click_nav_link_until_tab_opens(win, link_title, tab_title, max_attempts=4, settle_delay=0.6):
-    """Nav-panel Text links can switch to an ALREADY-OPEN tab (left over
-    from a previous run) instead of creating a fresh one. If that leftover
-    tab has unsaved content, Fakturama prefixes its title with '*' (same
-    convention confirmed for '*New Order') -- so searching for the exact
-    clean title never matches it, making a perfectly successful click look
-    like a repeated failure. Matches both 'TabTitle' and '*TabTitle'."""
+    """Sometimes it would click once and the tab doesn't open, so this function is for it to try clicking multiple times."""
     import re
     tab_title_pattern = re.compile(r"^\*?" + re.escape(tab_title) + r"$")
 
@@ -244,8 +222,6 @@ def click_nav_link_until_tab_opens(win, link_title, tab_title, max_attempts=4, s
     )
 
 def _find_button_in_toolbar(win, title):
-    """Finds a toolbar button, falling back to partial title matching if exact text fails,
-    filtered by vertical position to target the top toolbar."""
     candidates = win.descendants(control_type="Button")
     matched = []
     for b in candidates:
@@ -259,6 +235,6 @@ def _find_button_in_toolbar(win, title):
     if not matched:
         raise RuntimeError(f"Could not find any toolbar button matching '{title}'.")
     
-    # Sort by vertical position (top toolbar sits above docked panels)
+    # Sort by vertical position 
     matched.sort(key=lambda b: b.rectangle().top)
     return matched[0]

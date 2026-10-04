@@ -11,7 +11,7 @@ def run_stage4(win):
     
     order_pane = ensure_order_tab_active(win)
     
-    # Find the save button and click it directly (descendants() already resolved it)
+    # Find the save button and click it directly 
     save_btn = _find_button_in_toolbar(win, "Save")
     invoke_or_click(save_btn, "Save Order button")
     time.sleep(1.0)
@@ -27,7 +27,7 @@ def run_stage4(win):
     except Exception as e:
         print(f"[WARN] Could not switch to Documents tab: {e}")
 
-    # Best-effort direct read from the Order's summary fields
+    #  read from the Order's summary fields
     for label in ("Total Gross", "Total"):
         try:
             candidates = order_pane.descendants(title=label, control_type="Edit")

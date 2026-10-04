@@ -20,10 +20,7 @@ from ui_helpers import (
 )
 
 def get_addresses_icons(order_pane):
-    """Two Image icons near the Addresses label: upper = existing-contact
-    (select), lower = green + (new debtor -- PDF says don't click this
-    directly; we use the 'New Contact' nav link instead, per step 2.5).
-    Distinguished by vertical position read live from the tree."""
+    """Use the 'New Contact' nav link."""
     addresses_label = order_pane.child_window(title="Addresses", control_type="Text")
     addresses_label.wait("exists visible", timeout=ACTION_TIMEOUT)
     label_rect = addresses_label.rectangle()
@@ -55,10 +52,7 @@ def _find_select_address_dialog(win):
 
 
 def _verify_addresses_populated(order_pane, extracted):
-    """Step 2.4: confirm the Invoice address tab now shows matching data.
-    'Invoice address' is a Tab control, not an Edit -- the actual text
-    lives in an unnamed Edit nested inside that Tab (confirmed from the
-    original Order tree dump)."""
+    """Confirm the Invoice address tab now shows matching data."""
     invoice_tab = order_pane.child_window(title="Invoice address", control_type="Tab")
     invoice_tab.wait("exists visible", timeout=ACTION_TIMEOUT)
 
@@ -74,10 +68,8 @@ def _verify_addresses_populated(order_pane, extracted):
     print(f"[OK] Invoice address verified against extracted data: '{text}'")
 
 def _read_invoice_address_text(order_pane):
-    """Logs diagnostics instead of silently swallowing all exceptions as
-    'empty' -- that masking is likely why earlier debugging couldn't tell
-    a genuine empty result apart from a lookup failure against a stale
-    pane reference."""
+    """Returns the Invoice address text, or "" on failure. Logs the
+    reason so failures aren't silently masked as empty results."""
     try:
         invoice_tab = order_pane.child_window(title="Invoice address", control_type="Tab")
         invoice_tab.wait("exists visible", timeout=3)
@@ -255,10 +247,6 @@ def fill_main_address(debtor_pane, extracted):
     country_combo.select(extracted["country"])
     time.sleep(0.2)
 
-    # window_text() on this ComboBox returns its static accessible name
-    # ('Country'), not the selected value -- confirmed by this exact bug.
-    # Read the live value via UIA's ValuePattern instead, same approach
-    # used for GridPattern elsewhere in this script.
     actual = None
     try:
         actual = country_combo.iface_value.CurrentValue
@@ -266,9 +254,6 @@ def fill_main_address(debtor_pane, extracted):
         pass
 
     if actual is None:
-        # Fall back to the nested Text's content as a last resort, even
-        # though we've seen it can be static -- still check it in case
-        # this particular combo's inner Text DOES update on some builds.
         try:
             inner_text = country_combo.child_window(control_type="Text")
             actual = inner_text.window_text()
@@ -300,13 +285,7 @@ def fill_main_address(debtor_pane, extracted):
 
 
 def assign_address_role(debtor_pane, win, billing_equals_delivery=True):
-    """Opens the address-type role popup and checks the appropriate boxes.
-    Confirmed via tree inspection: this is an embedded dialog (Win32 class
-    '#32770', a native dialog box) inside Fakturama's own window -- not a
-    separate top-level OS window -- containing exactly two CheckBox
-    controls: 'Invoice address' and 'Delivery address'. They sit as a
-    sibling Pane at the window root, outside the debtor form's own
-    subtree, so this searches 'win', not 'debtor_pane'."""
+    """Opens the address-type role popup and checks the appropriate boxes."""
     address_type_label = debtor_pane.child_window(title="address type", control_type="Text")
     address_type_label.wait("exists visible", timeout=ACTION_TIMEOUT)
     lrect = address_type_label.rectangle()
@@ -353,9 +332,6 @@ def assign_address_role(debtor_pane, win, billing_equals_delivery=True):
         else:
             print("[OK] 'Delivery address' left unchecked (billing/delivery differ).")
 
-    # NOTE: no OK/Close button was captured for this popup -- only the two
-    # checkboxes. Defaulting to Enter; verify this actually dismisses the
-    # popup cleanly rather than submitting the whole form unexpectedly.
     debtor_pane.type_keys("{ESC}")
     time.sleep(0.3)
     print("[INFO] Pressed Escape to close the role popup.")
@@ -441,19 +417,14 @@ def reselect_saved_debtor(win, order_pane, extracted):
         raise RuntimeError("Could not find the open Order tab to switch back to.")
 
     invoke_or_click(order_tab, "Order tab", prefer_click=True)
-    # Increased from 0.5s -- Eclipse/SWT needs more time to finish
-    # re-rendering the tab's widget tree after a switch, especially right
-    # after a Debtor save committed to the database.
+  
+    # Give Eclipse/SWT time to finish re-rendering
     time.sleep(1.0)
 
     fresh_order_pane = get_order_content_pane(win)
     fresh_order_pane.set_focus()
     time.sleep(0.3)
 
-    # Longer, more patient poll window for this specific call -- a newly
-    # saved Debtor's data may take longer to populate into Invoice address
-    # than a pre-existing one, since Fakturama may need to query the
-    # just-committed database record rather than reading cached UI state.
     found = try_select_existing_debtor(win, fresh_order_pane, extracted, confirm_timeout=8)
     if not found:
         raise RuntimeError(
@@ -473,9 +444,7 @@ def select_or_create_debtor(win, order_pane, extracted):
     assign_address_role(debtor_pane, win, extracted.get("billing_equals_delivery", True))
     configure_miscellaneous_and_payment(debtor_pane, extracted)
 
-    # Diagnostic checkpoint: confirm Company survived everything up to this
-    # point, BEFORE clicking Save -- pinpoints whether loss happens during
-    # the form-filling steps or during Save itself.
+    # Checkpoint: confirm Company is inserted correctly
     company_field = debtor_pane.child_window(title="Company", control_type="Edit")
     pre_save_value = read_edit_value(company_field)
     print(f"[CHECKPOINT] Company field value immediately before Save: '{pre_save_value}'")

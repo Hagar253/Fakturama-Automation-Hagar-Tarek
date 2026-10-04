@@ -10,12 +10,8 @@ Two-pass extraction:
   which is far more accurate than reading the whole page at once.
 """
 import argparse
-import base64
 import json
-import os
 import re
-import urllib.error
-import urllib.request
 
 import pytesseract
 from PIL import Image, ImageFilter
@@ -25,19 +21,12 @@ TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 PASS1_WIDTH = 2400   # target width for the whole-image pass
 PASS2_UPSCALE = 8    # how much to upscale region crops for the detail pass
 
-# Fakturama payment-code mapping (kept in one place for OCR + LLM paths)
+# Fakturama payment-code mapping (kept in one place for OCR)
 PAYMENT_CODE_MAP = {
     "Bank Transfer": "Credit transfer",
     "Credit Card": "Credit card",
     "SEPA Direct Debit": "SEPA direct debit",
     "Cash": "Cash",
-}
-
-# Default LLM model per provider (vision-capable)
-DEFAULT_MODEL = {
-    "anthropic": "claude-sonnet-4-5",
-    "openai": "gpt-4o",
-    "opencode-go": "deepseek-v4-flash-vision-exp",  # OpenCode Go's explicit vision model
 }
 
 # --------------------------------------------------------------------------
@@ -453,158 +442,6 @@ def parse_items_region(orig, bounds, scale, order) -> None:
                 "line_total": line_total,
             })
 
-
-# --------------------------------------------------------------------------
-# 5b) LLM extraction (optional normalizer) - no extra pip deps (stdlib urllib)
-# --------------------------------------------------------------------------
-LLM_PROMPT = """You are extracting a structured order from a sales-order image.
-Return ONLY a JSON object with exactly this structure (no markdown, no commentary):
-
-{
-  "order_ref": "string or null",
-  "order_date": "YYYY-MM-DD or null",
-  "customer_id": "string or null",
-  "currency": "string or null",
-  "customer": {
-    "company": "string or null",
-    "contact": "string or null",
-    "alias": "string or null",
-    "email": "string or null",
-    "phone": "string or null",
-    "billing_address": "string or null",
-    "delivery_address": "string or null"
-  },
-  "payment": {
-    "method": "one of: Bank Transfer, Credit Card, SEPA Direct Debit, Cash (or null)",
-    "status": "PAID or UNPAID or null",
-    "date": "YYYY-MM-DD or null"
-  },
-  "items": [
-    {
-      "sku": "string or null",
-      "description": "string or null",
-      "quantity": number or null,
-      "unit_price": number or null,
-      "line_total": number or null,
-      "discount_percent": number or null,
-      "vat_percent": number or null
-    }
-  ],
-  "totals": {"net": number or null, "vat": number or null, "gross": number or null}
-}
-
-Rules:
-- If a value is not clearly readable, use null rather than guessing.
-- Numbers must be plain numbers (no currency symbols, no thousand separators).
-- Use the exact spellings visible in the image (company names, SKUs, streets).
-"""
-
-
-def _num(v):
-    """Coerce LLM JSON number to float/int safely."""
-    if v is None or v == "":
-        return None
-    try:
-        f = float(v)
-    except (TypeError, ValueError):
-        return None
-    return round(f, 2)
-
-
-def llm_extract(image_path: str, provider: str, api_key: str) -> dict:
-    """Send the image to a vision-capable LLM and return the parsed order dict."""
-    with open(image_path, "rb") as f:
-        img_b64 = base64.b64encode(f.read()).decode("ascii")
-
-    if provider == "anthropic":
-        payload = {
-            "model": "claude-sonnet-4-5",
-            "max_tokens": 1500,
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "image",
-                     "source": {"type": "base64", "media_type": "image/png", "data": img_b64}},
-                    {"type": "text", "text": LLM_PROMPT},
-                ],
-            }],
-        }
-        req = urllib.request.Request(
-            "https://api.anthropic.com/v1/messages",
-            data=json.dumps(payload).encode(),
-            headers={"content-type": "application/json",
-                     "x-api-key": api_key, "anthropic-version": "2023-06-01"},
-        )
-    elif provider == "openai":
-        payload = {
-            "model": "gpt-4o",
-            "messages": [{
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": LLM_PROMPT},
-                    {"type": "image_url",
-                     "image_url": {"url": f"data:image/png;base64,{img_b64}"}},
-                ],
-            }],
-        }
-        req = urllib.request.Request(
-            "https://api.openai.com/v1/chat/completions",
-            data=json.dumps(payload).encode(),
-            headers={"content-type": "application/json",
-                     "authorization": f"Bearer {api_key}"},
-        )
-    else:
-        raise ValueError(f"Unknown LLM provider: {provider}")
-
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            body = json.loads(resp.read().decode())
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"LLM API error {e.code}: {e.read().decode()[:300]}")
-
-    if provider == "anthropic":
-        text = "".join(b.get("text", "") for b in body.get("content", []))
-    else:
-        text = body["choices"][0]["message"]["content"]
-
-    # extract the JSON object even if the model wrapped it in markdown fences
-    m = re.search(r"\{.*\}", text, re.S)
-    if not m:
-        raise RuntimeError(f"LLM returned no JSON: {text[:200]!r}")
-    raw = json.loads(m.group(0))
-
-    # Map LLM JSON -> our order schema (defensively, coercing numbers)
-    order = empty_order()
-    order["order_ref"] = raw.get("order_ref")
-    order["order_date"] = raw.get("order_date")
-    order["customer_id"] = raw.get("customer_id")
-    order["currency"] = (raw.get("currency") or "").upper() or None
-    c = raw.get("customer") or {}
-    for k in ("company", "contact", "alias", "email", "phone",
-              "billing_address", "delivery_address"):
-        order["customer"][k] = c.get(k)
-    p = raw.get("payment") or {}
-    order["payment"]["method"] = p.get("method")
-    order["payment"]["code"] = PAYMENT_CODE_MAP.get(order["payment"]["method"])
-    order["payment"]["status"] = (p.get("status") or "").upper() or None
-    order["payment"]["date"] = p.get("date")
-    for it in (raw.get("items") or []):
-        order["items"].append({
-            "sku": it.get("sku"),
-            "description": it.get("description"),
-            "quantity": _num(it.get("quantity")),
-            "unit_price": _num(it.get("unit_price")),
-            "line_total": _num(it.get("line_total")),
-            "discount_percent": _num(it.get("discount_percent")),
-            "vat_percent": _num(it.get("vat_percent")),
-        })
-    t = raw.get("totals") or {}
-    order["totals"] = {"net": _num(t.get("net")),
-                       "vat": _num(t.get("vat")),
-                       "gross": _num(t.get("gross"))}
-    return order
-
-
 # --------------------------------------------------------------------------
 # 6) Validate
 # --------------------------------------------------------------------------
@@ -653,30 +490,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("image", nargs="?", default="input_image.png")
     ap.add_argument("--out", default="order.json")
-    ap.add_argument("--llm", action="store_true",
-                    help="Use an LLM (vision) to extract instead of OCR. "
-                         "Set ANTHROPIC_API_KEY or OPENAI_API_KEY and pick --provider.")
-    ap.add_argument("--provider", choices=["anthropic", "openai"], default="anthropic",
-                    help="LLM provider to use with --llm (default: anthropic)")
+    
     args = ap.parse_args()
 
-    if args.llm:
-        api_key = (os.environ.get("ANTHROPIC_API_KEY") if args.provider == "anthropic"
-                   else os.environ.get("OPENAI_API_KEY"))
-        if not api_key:
-            key_name = ("ANTHROPIC_API_KEY" if args.provider == "anthropic"
-                        else "OPENAI_API_KEY")
-            raise SystemExit(f"ERROR: set {key_name} environment variable first.")
-        order = llm_extract(args.image, args.provider, api_key)
-        print("[LLM extraction used]")
-    else:
-        pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
-        orig, big, scale = preprocess(args.image)
-        order, bounds = pass1(orig, big, scale)
-        parse_customer_email(orig, bounds, scale, order)
-        parse_address_region(orig, bounds, scale, order)
-        parse_items_region(orig, bounds, scale, order)
-        print("[OCR extraction used]")
+    ipytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
+
+    orig, big, scale = preprocess(args.image)
+
+    order, bounds = pass1(orig, big, scale)
+
+    parse_customer_email(orig, bounds, scale, order)
+    parse_address_region(orig, bounds, scale, order)
+    parse_items_region(orig, bounds, scale, order)
+
+    print("[OCR extraction used]")
 
     issues = validate(order)
 

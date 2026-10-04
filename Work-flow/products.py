@@ -21,10 +21,8 @@ from ui_helpers import (
 
 
 def get_items_icons(order_pane):
-    """Items section has 4 Image icons. Per PDF step 3.2, and confirmed by
-    manually opening 'Select a product' via the topmost one, icons[0]
-    (topmost) is the Product-selection trigger; the other three are
-    unrelated row-action icons."""
+    """Items section has 4 Image icons. icons[0]
+    (topmost) is the Product-selection trigger."""
     items_label = order_pane.child_window(title="Items", control_type="Text")
     items_label.wait("exists visible", timeout=ACTION_TIMEOUT)
     label_rect = items_label.rectangle()
@@ -46,18 +44,8 @@ def _find_select_product_dialog(win):
 
 
 def _select_filtered_product_and_confirm(dialog):
-    """Same zero-rows-in-UIA-tree gap confirmed for this dialog. Reuses
-    the click-into-grid + Down-arrow mechanism validated for Debtor
-    selection.
-
-    IMPORTANT: this SWT dialog can auto-select and auto-close itself once
-    the search text narrows results to a single exact match, WITHOUT
-    needing OK clicked explicitly -- the same behavior confirmed earlier
-    on the Debtor 'Select the address' dialog. If that already happened
-    by the time this function runs, the dialog no longer exists, and
-    trying to keep interacting with it (search_label.wait(), etc.) times
-    out even though the selection already succeeded. Check for that
-    first instead of assuming the dialog is still open."""
+    """Grid rows aren't exposed in UIA, so we click into the grid and
+    press Down, same approach used for Debtor selection."""
     try:
         still_open = dialog.exists() and dialog.is_visible()
     except Exception:
@@ -296,20 +284,13 @@ def select_or_create_product(win, item):
 
 
 def fill_line_details(order_pane, item):
-    """CONFIRMED LIMITATION: the Items grid exposes ZERO child elements in
-    the UIA tree -- not even a header or ScrollBar, unlike the selection
-    dialogs. Individual cells (Qty, U.Price, Discount, Price) cannot be
-    found, read, or verified via accessible name/control_type.
+    """KNOWN LIMITATION: the Items grid exposes no child elements in the
+    UIA tree, so individual cells (Qty, U.Price, Discount, Price) can't
+    be found or verified. We fall back to blind keyboard entry -- only
+    order-level totals can be checked afterward.
 
-    The only available mechanism is blind keyboard navigation: after OK
-    closes the product-selection dialog, focus typically lands in/near the
-    new row's first editable cell (Qty). This CANNOT be verified cell-by-
-    cell -- only order-level totals can be checked afterward.
-
-    The Tab-count below is an ESTIMATE based on visible column order
-    (Pos. | Qty. | Item No. | Description | Unit | Unit net | Disc. | VAT
-    | Line net). You must watch this run once and correct the tab counts
-    to match what you actually observe on screen."""
+    Tab counts below are an ESTIMATE based on the visible column order.
+    Watch the first run and adjust the tab counts if needed."""
     print(
         "[WARN] Items grid cells are not exposed in UIA (confirmed). Using "
         "blind keyboard entry -- no per-cell verification possible. WATCH "
@@ -355,19 +336,11 @@ def verify_order_totals(order_pane, expected_total_gross=None):
 
 
 def select_or_create_all_products(win, items):
-    """No longer takes order_pane -- re-fetches fresh at every step,
-    since EITHER branch (select-existing OR create-new) can leave the
-    active tab in a different state than where the loop started, and the
-    next item's processing must not assume anything about current focus."""
     order_pane = None
     for idx, item in enumerate(items, start=1):
         print(f"\n--- Product {idx}/{len(items)}: SKU '{item['sku']}' ---")
         select_or_create_product(win, item)
 
-        # Re-sync again before line-detail entry -- select_or_create_product
-        # may have crossed tabs internally (creation branch) even if it
-        # returns having already re-synced once; this is the pane that
-        # fill_line_details will actually type into.
         order_pane = ensure_order_tab_active(win)
         fill_line_details(order_pane, item)
 
@@ -390,8 +363,7 @@ def _find_button_in_toolbar(win, title):
 
 def save_order(win):
     """Saves the Order itself -- same top-toolbar 'Save the current
-    contents' button used for Debtor/Product, filtered for ambiguity
-    the same way open_new_product_form's button lookup was."""
+    contents' button."""
     save_btn = _find_button_in_toolbar(win, "Save the current contents")
     save_btn.wait("exists enabled visible", timeout=ACTION_TIMEOUT)
     invoke_or_click(save_btn, "Save the current contents (Order)")
@@ -402,10 +374,7 @@ def save_order(win):
 def switch_to_documents_tab_and_report(win, order_pane):
     """Switches to the bottom-docked 'Documents' tab so the Order's Total
     can be visually confirmed in the recording. Also attempts to read
-    Total/Total Gross directly from the Order's own summary fields
-    (Edit controls named 'Total Gross' / 'Total'), which are a more
-    reliable read than the Documents panel's own grid (same zero-row-
-    exposed limitation likely applies there, unconfirmed)."""
+    Total/Total Gross directly from the Order's own summary fields."""
     try:
         docs_tab = win.child_window(title="Documents", control_type="TabItem")
         docs_tab.wait("exists visible", timeout=3)

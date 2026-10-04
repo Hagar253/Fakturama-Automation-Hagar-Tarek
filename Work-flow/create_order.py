@@ -97,12 +97,6 @@ def set_custref_field(order_pane, cust_ref):
 
 
 def set_price_and_vat_mode(order_pane, win, price_mode="Net"):
-    """The Net/Gross selector is an UNNAMED ComboBox near the top of the
-    Order pane (confirmed from the original tree dump: sits beside the
-    Date field, before the 'Order' label). It is distinct from the
-    separately-named 'VAT' ComboBox (the With VAT/Without VAT setting),
-    which is why searching by name alone never found it -- this finds it
-    by being the one ComboBox in order_pane with no accessible name."""
     unnamed_combos = [
         c for c in order_pane.descendants(control_type="ComboBox")
         if not (c.window_text() or "").strip()
@@ -147,8 +141,6 @@ def set_price_and_vat_mode(order_pane, win, price_mode="Net"):
         print(f"[OK] Price mode set to '{price_mode}' and verified: '{actual}'")
 
     # Separately confirm the named 'VAT' combo (With VAT / Without VAT)
-    # already reflects the desired default, since it was only detected,
-    # never actually checked, in the earlier version of this function.
     try:
         vat_combo = win.child_window(title="VAT", control_type="ComboBox")
         vat_combo.wait("exists visible", timeout=3)
